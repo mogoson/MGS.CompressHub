@@ -353,6 +353,64 @@
             <param name="progressCallback">Progress callback.</param>
             <param name="completeCallback">Complete callback.</param>
         </member>
+        <member name="T:MGS.Common.IO.FileCache">
+            <summary>
+            Cache for file.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.IO.FileCache.cacheDir">
+            <summary>
+            Directory for file cache.
+            </summary>
+        </member>
+        <member name="M:MGS.Common.IO.FileCache.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="cacheDir">Directory for file cache.</param>
+        </member>
+        <member name="M:MGS.Common.IO.FileCache.ResolveFile(System.String)">
+            <summary>
+            Resolve file path from cache by key.
+            </summary>
+            <param name="key">Key for cache file.</param>
+            <returns>File path from cache by key.</returns>
+        </member>
+        <member name="M:MGS.Common.IO.FileCache.FindFile(System.String,System.String)">
+            <summary>
+            Find the cache file from cache by key.
+            </summary>
+            <param name="key">Key for cache file.</param>
+            <param name="md5Hash">Matching file md5 hash [Do not check md5 hash if the value is null or empty].</param>
+            <returns>The path of cache file from cache by key.</returns>
+        </member>
+        <member name="M:MGS.Common.IO.FileCache.CopyFrom(System.String,System.String)">
+            <summary>
+            Copy the file in to cache.
+            </summary>
+            <param name="file">The target file path.</param>
+            <param name="key">Key for cache file [Use md5 hash of file path as key if the value is null or empty].</param>
+            <returns>The key for cache file.</returns>
+        </member>
+        <member name="M:MGS.Common.IO.FileCache.CopyTo(System.String,System.String)">
+            <summary>
+            Copy the cache file to dest file by the key.
+            </summary>
+            <param name="key">Key for cache file.</param>
+            <param name="destFile"></param>
+            <returns>Is Succeed?</returns>
+        </member>
+        <member name="M:MGS.Common.IO.FileCache.Clear(System.String)">
+            <summary>
+            Clear the cache file by key.
+            </summary>
+            <param name="key">Key for cache file.</param>
+        </member>
+        <member name="M:MGS.Common.IO.FileCache.Clear">
+            <summary>
+            Clear all of the cache files.
+            </summary>
+        </member>
         <member name="T:MGS.Common.IO.FileUtility">
             <summary>
             Utility for file.
