@@ -52,8 +52,8 @@ LogUtility.LogWarning("Log warning is {0}", warning);
 
 ```c#
 //Delete MGS.ULogger.dll
-//Register the FileLogger to LogUtility.
 //new a FileLogger with custom log file path;
+//Register the FileLogger to LogUtility.
 
 var logDir = string.Format("{0}/Log/", Environment.CurrentDirectory);
 LogUtility.Register(new FileLogger(logDir));
