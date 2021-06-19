@@ -94,7 +94,7 @@
   ```
 
 ## Demo
-- Demos in the path "./Compress/Demo/Scenes/" provide reference to you.
+- Demos in the path "MGS.Packages/Compress/Demo/" provide reference to you.
 
 ------
 

@@ -94,7 +94,7 @@
   ```
 
 ## Demo
-- Demos in the path "MGS.Compress/Scenes" provide reference to you.
+- Demos in the path "MGS.Packages/Compress/Demo/" provide reference to you.
 
 ## Source
 - https://github.com/mogoson/MGS.Compress.
