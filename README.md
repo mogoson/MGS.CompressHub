@@ -102,6 +102,9 @@
 ## Demo
 - Demos in the path "MGS.Packages/Compress/Demo/" provide reference to you.
 
+## Preview
+![Compress](./Attachment/images/Compress.PNG)
+
 ------
 
 Copyright © 2021 Mogoson.	mogoson@outlook.com
