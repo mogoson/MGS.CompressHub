@@ -1,7 +1,7 @@
 # MGS.Compress
 
 ## Summary
-- Compress and decompress base Ionic.Zip.dll lib.
+- Compress and decompress file.
 
 ## Environment
 - Unity 5.0 or above.
