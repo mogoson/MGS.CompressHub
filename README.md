@@ -38,8 +38,10 @@
       (isSucceed, info) =>
       {
           //Show result.
-          //if isSucceed==true, the info is the path of zipFile;
-          //if isSucceed==false, the info is error message.
+          //if isSucceed==true, the type of info is string
+          //and content is the path of zipFile;
+          
+          //if isSucceed==false, the type of info is Exception.
       });
   ```
 
@@ -58,8 +60,10 @@
       (isSucceed, info) =>
       {
           //Show result.
-          //if isSucceed==true, the info is the path of unzip dir;
-          //if isSucceed==false, the info is error message.
+          //if isSucceed==true, the type of info is string
+          //and content is the path of unzip dir;
+          
+          //if isSucceed==false, the type of info is Exception.
       });
   ```
 
@@ -75,17 +79,19 @@
           Encoding encoding, string directoryPathInArchive = null,
           bool clearBefor = true,
           Action<float> progressCallback = null,
-          Action<bool, string> completeCallback = null)
+          Action<bool, object> completeCallback = null)
       {
           //Implemente compress logic.
+          //Usually completeCallback.Invoke(false, new Exception(msg)) on error.
       }
   
       public void Decompress(string filePath, string destDir,
           bool clearBefor = true,
           Action<float> progressCallback = null,
-          Action<bool, string> completeCallback = null)
+          Action<bool, object> completeCallback = null)
       {
           //Implemente decompress logic.
+          //Usually completeCallback.Invoke(false, new Exception(msg)) on error.
       }
   }
   
