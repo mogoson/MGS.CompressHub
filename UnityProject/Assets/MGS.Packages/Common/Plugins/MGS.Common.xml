@@ -11,20 +11,20 @@
         </member>
         <member name="M:MGS.Common.Collection.EnumeratorUtility.Collect(System.Collections.IEnumerator,System.Action{System.Object},System.Action)">
             <summary>
-            Collect progress states and complete event.
+            Collect progress states and Finished event.
             </summary>
             <param name="enumerator">Source enumerator.</param>
             <param name="progress">Progress event.</param>
-            <param name="complete">Complete event.</param>
+            <param name="finished">Finished event.</param>
             <returns>IEnumerator.</returns>
         </member>
         <member name="M:MGS.Common.Collection.EnumeratorUtility.Collect(System.Collections.Generic.IEnumerable{System.Collections.IEnumerator},System.Action{System.Object},System.Action)">
             <summary>
-            Collect progress states and complete event.
+            Collect progress states and Finished event.
             </summary>
             <param name="enumerators">IEnumerable of source enumerator.</param>
             <param name="progress">Progress event.</param>
-            <param name="complete">Complete event.</param>
+            <param name="finished">Finished event.</param>
             <returns>IEnumerator.</returns>
         </member>
         <member name="M:MGS.Common.Collection.EnumeratorUtility.CollectAsync(System.Collections.IEnumerator)">
@@ -342,7 +342,7 @@
             <param name="destDir">Dest dir.</param>
             <param name="ignores">Ignore files or directories.</param>
             <param name="progressCallback">Progress callback.</param>
-            <param name="completeCallback">Complete callback.</param>
+            <param name="finishedCallback">finished callback.</param>
         </member>
         <member name="M:MGS.Common.IO.DirectoryUtility.DeleteChildrenEntries(System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Single},System.Action{System.Boolean,System.String})">
             <summary>
@@ -351,7 +351,7 @@
             <param name="destDir">Dest dir.</param>
             <param name="ignores">Ignore files or directories.</param>
             <param name="progressCallback">Progress callback.</param>
-            <param name="completeCallback">Complete callback.</param>
+            <param name="finishedCallback">finished callback.</param>
         </member>
         <member name="T:MGS.Common.IO.FileCache">
             <summary>

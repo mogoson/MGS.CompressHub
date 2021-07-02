@@ -79,7 +79,7 @@ namespace MGS.Compress
                     Dispatcher.BeginInvoke(() =>
                     {
                         btn_StartUnzip.interactable = true;
-                        txt_Info.text = info;
+                        txt_Info.text = info.ToString();
 
                         if (isSucceed) { Debug.Log(info); }
                         else { Debug.LogError(info); }
