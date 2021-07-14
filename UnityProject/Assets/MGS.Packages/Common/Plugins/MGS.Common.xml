@@ -191,137 +191,6 @@
             <param name="processNames">Names of processes.</param>
             <returns>Succeed?</returns>
         </member>
-        <member name="T:MGS.Common.Generic.DelegateUtility">
-            <summary>
-            Utility for delegate.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.DelegateUtility.Invoke(System.Action)">
-            <summary>
-            Invoke action and try catch exception.
-            </summary>
-            <param name="action"></param>
-        </member>
-        <member name="M:MGS.Common.Generic.DelegateUtility.Invoke``1(System.Action{``0},``0)">
-            <summary>
-            Invoke action and try catch exception.
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="action"></param>
-            <param name="arg"></param>
-        </member>
-        <member name="M:MGS.Common.Generic.DelegateUtility.Invoke``2(System.Action{``0,``1},``0,``1)">
-            <summary>
-            Invoke action and try catch exception.
-            </summary>
-            <typeparam name="T1"></typeparam>
-            <typeparam name="T2"></typeparam>
-            <param name="action"></param>
-            <param name="arg1"></param>
-            <param name="arg2"></param>
-        </member>
-        <member name="T:MGS.Common.Generic.GenericEvent">
-            <summary>
-            Generic event.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.GenericEvent.callback">
-            <summary>
-            Event callback.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent.AddListener(System.Action)">
-            <summary>
-            Add event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent.RemoveListener(System.Action)">
-            <summary>
-            Remove event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent.RemoveListeners">
-            <summary>
-            Remove all event listeners.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent.Invoke">
-            <summary>
-            Invoke event.
-            </summary>
-        </member>
-        <member name="T:MGS.Common.Generic.GenericEvent`1">
-            <summary>
-            Generic event.
-            </summary>
-            <typeparam name="T">Specified type of event arg.</typeparam>
-        </member>
-        <member name="F:MGS.Common.Generic.GenericEvent`1.callback">
-            <summary>
-            Event callback.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`1.AddListener(System.Action{`0})">
-            <summary>
-            Add event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`1.RemoveListener(System.Action{`0})">
-            <summary>
-            Remove event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`1.RemoveListeners">
-            <summary>
-            Remove all event listeners.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`1.Invoke(`0)">
-            <summary>
-            Invoke event.
-            </summary>
-            <param name="arg">Arg of event.</param>
-        </member>
-        <member name="T:MGS.Common.Generic.GenericEvent`2">
-            <summary>
-            Generic event.
-            </summary>
-            <typeparam name="T1">Specified type of event arg1.</typeparam>
-            <typeparam name="T2">Specified type of event arg2.</typeparam>
-        </member>
-        <member name="F:MGS.Common.Generic.GenericEvent`2.callback">
-            <summary>
-            Event callback.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`2.AddListener(System.Action{`0,`1})">
-            <summary>
-            Add event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`2.RemoveListener(System.Action{`0,`1})">
-            <summary>
-            Remove event listener.
-            </summary>
-            <param name="callback">Event callback.</param>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`2.RemoveListeners">
-            <summary>
-            Remove all event listeners.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.GenericEvent`2.Invoke(`0,`1)">
-            <summary>
-            Invoke event.
-            </summary>
-            <param name="arg1">Arg1 of event.</param>
-            <param name="arg2">Arg2 of event.</param>
-        </member>
         <member name="T:MGS.Common.IO.DirectoryUtility">
             <summary>
             Utility for directory.
@@ -334,7 +203,7 @@
             <param name="path">Directory or file path.</param>
             <returns>Succeed?</returns>
         </member>
-        <member name="M:MGS.Common.IO.DirectoryUtility.CopyChildrenEntries(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Single},System.Action{System.Boolean,System.String})">
+        <member name="M:MGS.Common.IO.DirectoryUtility.CopyChildrenEntries(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Single},System.Action{System.Boolean,System.Exception})">
             <summary>
             Copy the children entries of source to dest directory.
             </summary>
@@ -344,7 +213,7 @@
             <param name="progressCallback">Progress callback.</param>
             <param name="finishedCallback">finished callback.</param>
         </member>
-        <member name="M:MGS.Common.IO.DirectoryUtility.DeleteChildrenEntries(System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Single},System.Action{System.Boolean,System.String})">
+        <member name="M:MGS.Common.IO.DirectoryUtility.DeleteChildrenEntries(System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Single},System.Action{System.Boolean,System.Exception})">
             <summary>
             Delete the children entries of the directory.
             </summary>

@@ -10,7 +10,7 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using MGS.UCommon.Threading;
+using MGS.Common.Threading;
 using System;
 using System.IO;
 using UnityEngine;

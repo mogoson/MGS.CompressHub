@@ -4,441 +4,451 @@
         <name>MGS.UCommon</name>
     </assembly>
     <members>
-        <member name="T:MGS.UCommon.Event.MonoEventTrigger">
-            <summary>
-            Event trigger for UI behaviour.
-            </summary>
+        <member name="T:MGS.Common.Listener.MonoDragListener">
+             <summary>
+            Event Listener for drag.
+             </summary>
         </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onPointerEnter">
-            <summary>
-            On pointer enter event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onPointerExit">
-            <summary>
-            On pointer exit event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onPointerDown">
-            <summary>
-            On pointer down event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onPointerUp">
-            <summary>
-            On pointer up event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onPointerClick">
-            <summary>
-            On pointer click event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onBeginDrag">
-            <summary>
-            On begin drag event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onInitializePotentialDrag">
+        <member name="E:MGS.Common.Listener.MonoDragListener.OnInitializePotentialDragEvent">
             <summary>
             On initialize potential drag event.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onDrag">
+        <member name="E:MGS.Common.Listener.MonoDragListener.OnBeginDragEvent">
+            <summary>
+            On begin drag event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoDragListener.OnDragEvent">
             <summary>
             On drag event.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onEndDrag">
+        <member name="E:MGS.Common.Listener.MonoDragListener.OnEndDragEvent">
             <summary>
             On end drag event.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onDrop">
+        <member name="E:MGS.Common.Listener.MonoDragListener.OnDropEvent">
             <summary>
             On drop event.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onScroll">
+        <member name="E:MGS.Common.Listener.MonoDragListener.OnScrollEvent">
             <summary>
             On scroll event.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onUpdateSelected">
-            <summary>
-            On update selected event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onSelect">
-            <summary>
-            On select event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onDeselect">
-            <summary>
-            On deselect event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onMove">
+        <member name="E:MGS.Common.Listener.MonoDragListener.OnMoveEvent">
             <summary>
             On move event.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onSubmit">
-            <summary>
-            On submit event.
-            </summary>
-        </member>
-        <member name="P:MGS.UCommon.Event.MonoEventTrigger.onCancel">
-            <summary>
-            On cancel event.
-            </summary>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)">
-            <summary>
-            On pointer enter.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnPointerExit(UnityEngine.EventSystems.PointerEventData)">
-            <summary>
-            On pointer exit.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnPointerDown(UnityEngine.EventSystems.PointerEventData)">
-            <summary>
-            On pointer down.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnPointerUp(UnityEngine.EventSystems.PointerEventData)">
-            <summary>
-            On pointer up.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnPointerClick(UnityEngine.EventSystems.PointerEventData)">
-            <summary>
-            On pointer click.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)">
-            <summary>
-            On begin drag.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)">
+        <member name="M:MGS.Common.Listener.MonoDragListener.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)">
             <summary>
             On initialize potential drag.
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnDrag(UnityEngine.EventSystems.PointerEventData)">
+        <member name="M:MGS.Common.Listener.MonoDragListener.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On begin drag.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoDragListener.OnDrag(UnityEngine.EventSystems.PointerEventData)">
             <summary>
             On drag.
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnEndDrag(UnityEngine.EventSystems.PointerEventData)">
+        <member name="M:MGS.Common.Listener.MonoDragListener.OnEndDrag(UnityEngine.EventSystems.PointerEventData)">
             <summary>
             On end drag.
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnDrop(UnityEngine.EventSystems.PointerEventData)">
+        <member name="M:MGS.Common.Listener.MonoDragListener.OnDrop(UnityEngine.EventSystems.PointerEventData)">
             <summary>
             On drop.
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnScroll(UnityEngine.EventSystems.PointerEventData)">
+        <member name="M:MGS.Common.Listener.MonoDragListener.OnScroll(UnityEngine.EventSystems.PointerEventData)">
             <summary>
             On scroll.
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnUpdateSelected(UnityEngine.EventSystems.BaseEventData)">
-            <summary>
-            On update selected.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnSelect(UnityEngine.EventSystems.BaseEventData)">
-            <summary>
-            On select.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnDeselect(UnityEngine.EventSystems.BaseEventData)">
-            <summary>
-            On deselect.
-            </summary>
-            <param name="eventData">Pointer event data.</param>
-        </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnMove(UnityEngine.EventSystems.AxisEventData)">
+        <member name="M:MGS.Common.Listener.MonoDragListener.OnMove(UnityEngine.EventSystems.AxisEventData)">
             <summary>
             On move.
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnSubmit(UnityEngine.EventSystems.BaseEventData)">
+        <member name="T:MGS.Common.Listener.MonoPointerListener">
+            <summary>
+            Event Listener for pointer.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoPointerListener.OnPointerEnterEvent">
+            <summary>
+            On pointer enter event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoPointerListener.OnPointerExitEvent">
+            <summary>
+            On pointer exit event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoPointerListener.OnPointerDownEvent">
+            <summary>
+            On pointer down event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoPointerListener.OnPointerUpEvent">
+            <summary>
+            On pointer up event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoPointerListener.OnPointerClickEvent">
+            <summary>
+            On pointer click event.
+            </summary>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoPointerListener.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer enter.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoPointerListener.OnPointerExit(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer exit.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoPointerListener.OnPointerDown(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer down.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoPointerListener.OnPointerUp(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer up.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoPointerListener.OnPointerClick(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer click.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="T:MGS.Common.Listener.MonoSelectListener">
+             <summary>
+            Event Listener for select.
+             </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoSelectListener.OnSelectEvent">
+            <summary>
+            On select event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoSelectListener.OnUpdateSelectedEvent">
+            <summary>
+            On update selected event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoSelectListener.OnDeselectEvent">
+            <summary>
+            On deselect event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoSelectListener.OnSubmitEvent">
+            <summary>
+            On submit event.
+            </summary>
+        </member>
+        <member name="E:MGS.Common.Listener.MonoSelectListener.OnCancelEvent">
+            <summary>
+            On cancel event.
+            </summary>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoSelectListener.OnSelect(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            On select.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoSelectListener.OnUpdateSelected(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            On update selected.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoSelectListener.OnDeselect(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            On deselect.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.Common.Listener.MonoSelectListener.OnSubmit(UnityEngine.EventSystems.BaseEventData)">
             <summary>
             On submit.
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="M:MGS.UCommon.Event.MonoEventTrigger.OnCancel(UnityEngine.EventSystems.BaseEventData)">
+        <member name="M:MGS.Common.Listener.MonoSelectListener.OnCancel(UnityEngine.EventSystems.BaseEventData)">
             <summary>
             On cancel.
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="T:MGS.UCommon.Generic.Axis">
+        <member name="T:MGS.Common.Generic.Axis">
             <summary>
             Coordinate axis.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.Axis.X">
+        <member name="F:MGS.Common.Generic.Axis.X">
             <summary>
             X axis.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.Axis.Y">
+        <member name="F:MGS.Common.Generic.Axis.Y">
             <summary>
             Y axis.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.Axis.Z">
+        <member name="F:MGS.Common.Generic.Axis.Z">
             <summary>
             Z axis.
             </summary>
         </member>
-        <member name="T:MGS.UCommon.Generic.ColorBlendMode">
+        <member name="T:MGS.Common.Generic.ColorBlendMode">
             <summary>
             Mode of color blend.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Normal">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Normal">
             <summary>
             Normal-Normal Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Dissolve">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Dissolve">
             <summary>
             Normal-Dissolve Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Darken">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Darken">
             <summary>
             Darken-Darken Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Multiply">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Multiply">
             <summary>
             Darken-Multiply Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.ColorBurn">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.ColorBurn">
             <summary>
             Darken-ColorBurn Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.LinearBurn">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.LinearBurn">
             <summary>
             Darken-LinearBurn Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.DarkerColor">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.DarkerColor">
             <summary>
             Darken-DarkerColor Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Lighten">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Lighten">
             <summary>
             Lighten-Lighten Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Screen">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Screen">
             <summary>
             Lighten-Screen Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.ColorDodge">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.ColorDodge">
             <summary>
             Lighten-ColorDodge Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.LinearDodge">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.LinearDodge">
             <summary>
             Lighten-LinearDodge Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.LighterColor">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.LighterColor">
             <summary>
             Lighten-LighterColor Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Overlay">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Overlay">
             <summary>
             Contrast-Overlay Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.SoftLight">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.SoftLight">
             <summary>
             Contrast-SoftLight Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.HardLight">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.HardLight">
             <summary>
             Contrast-HardLight Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.VividLight">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.VividLight">
             <summary>
             Contrast-VividLight Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.LinearLight">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.LinearLight">
             <summary>
             Contrast-LinearLight Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.PinLight">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.PinLight">
             <summary>
             Contrast-PinLight Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.HardMix">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.HardMix">
             <summary>
             Contrast-HardMix Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Difference">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Difference">
             <summary>
             Cancelation-Difference Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Exclusion">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Exclusion">
             <summary>
             Cancelation-Exclusion Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Subtract">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Subtract">
             <summary>
             Cancelation-Subtract Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Divide">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Divide">
             <summary>
             Cancelation-Divide Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Hue">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Hue">
             <summary>
             Component-Hue Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Color">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Color">
             <summary>
             Component-Color Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Saturation">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Saturation">
             <summary>
             Component-Saturation Mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.ColorBlendMode.Luminosity">
+        <member name="F:MGS.Common.Generic.ColorBlendMode.Luminosity">
             <summary>
             Component-Luminosity Mode.
             </summary>
         </member>
-        <member name="T:MGS.UCommon.Generic.LerpMode">
+        <member name="T:MGS.Common.Generic.LerpMode">
             <summary>
             Lerp mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.LerpMode.Lerp">
+        <member name="F:MGS.Common.Generic.LerpMode.Lerp">
             <summary>
             Lerp mode.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.LerpMode.Towards">
+        <member name="F:MGS.Common.Generic.LerpMode.Towards">
             <summary>
             Towards mode.
             </summary>
         </member>
-        <member name="T:MGS.UCommon.Generic.MirrorMode">
+        <member name="T:MGS.Common.Generic.MirrorMode">
             <summary>
             Mode of mirror.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.MirrorMode.Horizontal">
+        <member name="F:MGS.Common.Generic.MirrorMode.Horizontal">
             <summary>
             Horizontal mirror.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.MirrorMode.Vertical">
+        <member name="F:MGS.Common.Generic.MirrorMode.Vertical">
             <summary>
             Vertical mirror.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.MirrorMode.Both">
+        <member name="F:MGS.Common.Generic.MirrorMode.Both">
             <summary>
             Both horizontal and vertical mirror.
             </summary>
         </member>
-        <member name="T:MGS.UCommon.Generic.Range">
+        <member name="T:MGS.Common.Generic.Range">
             <summary>
             Range form min to max.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.Range.min">
+        <member name="F:MGS.Common.Generic.Range.min">
             <summary>
             Min value of range.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.Range.max">
+        <member name="F:MGS.Common.Generic.Range.max">
             <summary>
             Max value of range.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Generic.Range.Length">
+        <member name="P:MGS.Common.Generic.Range.Length">
             <summary>
             Length of range from min to max.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Generic.Range.#ctor(System.Single,System.Single)">
+        <member name="M:MGS.Common.Generic.Range.#ctor(System.Single,System.Single)">
             <summary>
             Constructor.
             </summary>
             <param name="min">Min value of range.</param>
             <param name="max">Max value of range.</param>
         </member>
-        <member name="T:MGS.UCommon.Generic.PlaneArea">
+        <member name="T:MGS.Common.Generic.PlaneArea">
             <summary>
             Rectangle area on plane.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.PlaneArea.center">
+        <member name="F:MGS.Common.Generic.PlaneArea.center">
             <summary>
             Center of area.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.PlaneArea.width">
+        <member name="F:MGS.Common.Generic.PlaneArea.width">
             <summary>
             Width of area.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Generic.PlaneArea.length">
+        <member name="F:MGS.Common.Generic.PlaneArea.length">
             <summary>
             Length of area.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Generic.PlaneArea.#ctor(UnityEngine.Transform,System.Single,System.Single)">
+        <member name="M:MGS.Common.Generic.PlaneArea.#ctor(UnityEngine.Transform,System.Single,System.Single)">
             <summary>
             Constructor.
             </summary>
@@ -446,22 +456,22 @@
             <param name="width">Width of area.</param>
             <param name="length">Length of area.</param>
         </member>
-        <member name="T:MGS.UCommon.Extension.GameObjectExtention">
+        <member name="T:MGS.Common.Extension.GameObjectExtention">
             <summary>
             Extention for UnityEngine.GameObject.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Extension.GameObjectExtention.BroadcastLayer(UnityEngine.GameObject,System.Int32)">
+        <member name="M:MGS.Common.Extension.GameObjectExtention.BroadcastLayer(UnityEngine.GameObject,System.Int32)">
             <summary>
             Set layer include it's children.
             </summary>
         </member>
-        <member name="T:MGS.UCommon.Extension.TerrainExtension">
+        <member name="T:MGS.Common.Extension.TerrainExtension">
             <summary>
             Extension for UnityEngine.Terrain.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Extension.TerrainExtension.NormalizeRelativePosition(UnityEngine.Terrain,UnityEngine.Vector3)">
+        <member name="M:MGS.Common.Extension.TerrainExtension.NormalizeRelativePosition(UnityEngine.Terrain,UnityEngine.Vector3)">
             <summary>
             Normalize position relative to terrain.
             </summary>
@@ -469,7 +479,7 @@
             <param name="woldPos">Position in wold space.</param>
             <returns>Normalize position.</returns>
         </member>
-        <member name="M:MGS.UCommon.Extension.TerrainExtension.MapRelativePosition(UnityEngine.Terrain,UnityEngine.Vector3,UnityEngine.Vector3)">
+        <member name="M:MGS.Common.Extension.TerrainExtension.MapRelativePosition(UnityEngine.Terrain,UnityEngine.Vector3,UnityEngine.Vector3)">
             <summary>
             Position relative to terrain map.
             </summary>
@@ -478,12 +488,12 @@
             <param name="normalizePos">Normalize position relative to terrain.</param>
             <returns>Relative position.</returns>
         </member>
-        <member name="T:MGS.UCommon.Extension.Texture2DExtention">
+        <member name="T:MGS.Common.Extension.Texture2DExtention">
             <summary>
             Extention for UnityEngine.Texture2D.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color[],System.Int32,System.Boolean,System.Boolean)">
+        <member name="M:MGS.Common.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color[],System.Int32,System.Boolean,System.Boolean)">
             <summary>
             Update the pixels of Texture2D.
             </summary>
@@ -493,7 +503,7 @@
             <param name="updateMipmaps">When set to true, mipmap levels are recalculated.</param>
             <param name="makeNointerReadable">When set to true, system memory copy of a texture is released.</param>
         </member>
-        <member name="M:MGS.UCommon.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color[0:,0:],System.Int32,System.Boolean,System.Boolean)">
+        <member name="M:MGS.Common.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color[0:,0:],System.Int32,System.Boolean,System.Boolean)">
             <summary>
             Update the pixels of Texture2D.
             </summary>
@@ -503,7 +513,7 @@
             <param name="updateMipmaps">When set to true, mipmap levels are recalculated.</param>
             <param name="makeNointerReadable">When set to true, system memory copy of a texture is released.</param>
         </member>
-        <member name="M:MGS.UCommon.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color32[],System.Int32,System.Boolean,System.Boolean)">
+        <member name="M:MGS.Common.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color32[],System.Int32,System.Boolean,System.Boolean)">
             <summary>
             Update the pixels of Texture2D.
             </summary>
@@ -513,7 +523,7 @@
             <param name="updateMipmaps">When set to true, mipmap levels are recalculated.</param>
             <param name="makeNointerReadable">When set to true, system memory copy of a texture is released.</param>
         </member>
-        <member name="M:MGS.UCommon.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color32[0:,0:],System.Int32,System.Boolean,System.Boolean)">
+        <member name="M:MGS.Common.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color32[0:,0:],System.Int32,System.Boolean,System.Boolean)">
             <summary>
             Update the pixels of Texture2D.
             </summary>
@@ -523,7 +533,7 @@
             <param name="updateMipmaps">When set to true, mipmap levels are recalculated.</param>
             <param name="makeNointerReadable">When set to true, system memory copy of a texture is released.</param>
         </member>
-        <member name="T:MGS.UCommon.Serialization.DictionaryAvatar`2">
+        <member name="T:MGS.Common.Serialization.DictionaryAvatar`2">
             <summary>
             Avatar for Dictionary serialize by JsonUtility.
             </summary>
@@ -534,43 +544,43 @@
             The T must with SerializableAttribute and public field or private property with SerializeField Attribute if custom type.
             </typeparam>
         </member>
-        <member name="F:MGS.UCommon.Serialization.DictionaryAvatar`2.keys">
+        <member name="F:MGS.Common.Serialization.DictionaryAvatar`2.keys">
             <summary>
             List of keys.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Serialization.DictionaryAvatar`2.values">
+        <member name="F:MGS.Common.Serialization.DictionaryAvatar`2.values">
             <summary>
             List of values.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Serialization.DictionaryAvatar`2.Source">
+        <member name="P:MGS.Common.Serialization.DictionaryAvatar`2.Source">
             <summary>
             Source dictionary.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Serialization.DictionaryAvatar`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
+        <member name="M:MGS.Common.Serialization.DictionaryAvatar`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
             <summary>
             Constructor.
             </summary>
             <param name="source">Source dictionary.</param>
         </member>
-        <member name="M:MGS.UCommon.Serialization.DictionaryAvatar`2.OnBeforeSerialize">
+        <member name="M:MGS.Common.Serialization.DictionaryAvatar`2.OnBeforeSerialize">
             <summary>
             On before serialize.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Serialization.DictionaryAvatar`2.OnAfterDeserialize">
+        <member name="M:MGS.Common.Serialization.DictionaryAvatar`2.OnAfterDeserialize">
             <summary>
             On after deserialize.
             </summary>
         </member>
-        <member name="T:MGS.UCommon.Serialization.JsonUtilityPro">
+        <member name="T:MGS.Common.Serialization.JsonUtilityPro">
             <summary>
             JsonUtility Pro.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Serialization.JsonUtilityPro.FromJson``1(System.String)">
+        <member name="M:MGS.Common.Serialization.JsonUtilityPro.FromJson``1(System.String)">
             <summary>
             Deserialize List from json.
             </summary>
@@ -580,7 +590,7 @@
             <param name="json">Json text of List.</param>
             <returns>List object.</returns>
         </member>
-        <member name="M:MGS.UCommon.Serialization.JsonUtilityPro.FromAvatarJson``1(System.String)">
+        <member name="M:MGS.Common.Serialization.JsonUtilityPro.FromAvatarJson``1(System.String)">
             <summary>
             Deserialize List from avatar json.
             </summary>
@@ -590,7 +600,7 @@
             <param name="json">Json text of ListAvatar.</param>
             <returns>List object.</returns>
         </member>
-        <member name="M:MGS.UCommon.Serialization.JsonUtilityPro.ToJson``1(System.Collections.Generic.List{``0})">
+        <member name="M:MGS.Common.Serialization.JsonUtilityPro.ToJson``1(System.Collections.Generic.List{``0})">
             <summary>
             Serialize List to json.
             </summary>
@@ -600,7 +610,7 @@
             <param name="list">Source list.</param>
             <returns>Json text of List.</returns>
         </member>
-        <member name="M:MGS.UCommon.Serialization.JsonUtilityPro.ToAvatarJson``1(System.Collections.Generic.List{``0})">
+        <member name="M:MGS.Common.Serialization.JsonUtilityPro.ToAvatarJson``1(System.Collections.Generic.List{``0})">
             <summary>
             Serialize List to avatar json.
             </summary>
@@ -610,7 +620,7 @@
             <param name="list">Source list.</param>
             <returns>Json text of ListAvatar.</returns>
         </member>
-        <member name="M:MGS.UCommon.Serialization.JsonUtilityPro.FromJson``2(System.String)">
+        <member name="M:MGS.Common.Serialization.JsonUtilityPro.FromJson``2(System.String)">
             <summary>
             Deserialize Dictionary from json.
             </summary>
@@ -623,7 +633,7 @@
             <param name="json">Json text of DictionaryAvatar.</param>
             <returns>Dictionary object.</returns>
         </member>
-        <member name="M:MGS.UCommon.Serialization.JsonUtilityPro.ToJson``2(System.Collections.Generic.Dictionary{``0,``1})">
+        <member name="M:MGS.Common.Serialization.JsonUtilityPro.ToJson``2(System.Collections.Generic.Dictionary{``0,``1})">
             <summary>
             Serialize Dictionary to json.
             </summary>
@@ -636,21 +646,21 @@
             <param name="dictionary">Source dictionary.</param>
             <returns>Json text of DictionaryAvatar.</returns>
         </member>
-        <member name="M:MGS.UCommon.Serialization.JsonUtilityPro.ToListAvatar(System.String)">
+        <member name="M:MGS.Common.Serialization.JsonUtilityPro.ToListAvatar(System.String)">
             <summary>
             Parse list json to ListAvatar json.
             </summary>
             <param name="json">Json text of list.</param>
             <returns>Json text of ListAvatar.</returns>
         </member>
-        <member name="M:MGS.UCommon.Serialization.JsonUtilityPro.FromListAvatar(System.String)">
+        <member name="M:MGS.Common.Serialization.JsonUtilityPro.FromListAvatar(System.String)">
             <summary>
             Parse ListAvatar json to list json.
             </summary>
             <param name="json">Json text of ListAvatar.</param>
             <returns>Json text of list.</returns>
         </member>
-        <member name="T:MGS.UCommon.Serialization.ListAvatar`1">
+        <member name="T:MGS.Common.Serialization.ListAvatar`1">
             <summary>
             Avatar for List serialize by JsonUtility.
             </summary>
@@ -658,60 +668,60 @@
             The T must with SerializableAttribute and public field or private property with SerializeField Attribute if custom type.
             </typeparam>
         </member>
-        <member name="F:MGS.UCommon.Serialization.ListAvatar`1.source">
+        <member name="F:MGS.Common.Serialization.ListAvatar`1.source">
             <summary>
             Source list.
             </summary>
         </member>
-        <member name="P:MGS.UCommon.Serialization.ListAvatar`1.Source">
+        <member name="P:MGS.Common.Serialization.ListAvatar`1.Source">
             <summary>
             Source list.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Serialization.ListAvatar`1.#ctor(System.Collections.Generic.List{`0})">
+        <member name="M:MGS.Common.Serialization.ListAvatar`1.#ctor(System.Collections.Generic.List{`0})">
             <summary>
             Constructor.
             </summary>
             <param name="source">Source list.</param>
         </member>
-        <member name="T:MGS.UCommon.Threading.Dispatcher">
+        <member name="T:MGS.Common.Threading.Dispatcher">
             <summary>
             Dispatcher base main thread;
             Auto create instance run time.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Threading.Dispatcher.actions">
+        <member name="F:MGS.Common.Threading.Dispatcher.actions">
             <summary>
             Queue to cache custom actions.
             </summary>
         </member>
-        <member name="F:MGS.UCommon.Threading.Dispatcher.locker">
+        <member name="F:MGS.Common.Threading.Dispatcher.locker">
             <summary>
             Locker for thread synchronization.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Threading.Dispatcher.Initialize">
+        <member name="M:MGS.Common.Threading.Dispatcher.Initialize">
             <summary>
             Initialize dispatcher.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Threading.Dispatcher.Update">
+        <member name="M:MGS.Common.Threading.Dispatcher.Update">
             <summary>
             Update to invoke actions.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Threading.Dispatcher.BeginInvoke(System.Action)">
+        <member name="M:MGS.Common.Threading.Dispatcher.BeginInvoke(System.Action)">
             <summary>
             Begin invoke the action by main thread.
             </summary>
             <param name="action">The action to invoke.</param>
         </member>
-        <member name="T:MGS.UCommon.Utility.ColorBlendUtility">
+        <member name="T:MGS.Common.Utility.ColorBlendUtility">
             <summary>
             Utility for color blend.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.Blend(UnityEngine.Color,UnityEngine.Color,MGS.UCommon.Generic.ColorBlendMode)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.Blend(UnityEngine.Color,UnityEngine.Color,MGS.Common.Generic.ColorBlendMode)">
             <summary>
             Blend color a and color b.
             </summary>
@@ -720,7 +730,7 @@
             <param name="mode">Mode of color blend.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.NormalBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.NormalBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Normal mode blend color a and color b.
             </summary>
@@ -728,7 +738,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DissolveBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.DissolveBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Dissolve mode blend color a and color b.
             </summary>
@@ -736,7 +746,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DarkenBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.DarkenBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Darken mode blend color a and color b.
             </summary>
@@ -744,7 +754,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.MultiplyBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.MultiplyBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Multiply mode blend color a and color b.
             </summary>
@@ -752,7 +762,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ColorBurnBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.ColorBurnBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             ColorBurn mode blend color a and color b.
             </summary>
@@ -760,7 +770,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LinearBurnBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.LinearBurnBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             LinearBurn vblend color a and color b.
             </summary>
@@ -768,7 +778,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DarkerColorBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.DarkerColorBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             DarkerColor mode blend color a and color b.
             </summary>
@@ -776,7 +786,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LightenBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.LightenBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Lighten mode blend color a and color b.
             </summary>
@@ -784,7 +794,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ScreenBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.ScreenBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Screen mode blend color a and color b.
             </summary>
@@ -792,7 +802,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ColorDodgeBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.ColorDodgeBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             ColorDodge mode blend color a and color b.
             </summary>
@@ -800,7 +810,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LinearDodgeBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.LinearDodgeBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             LinearDodge mode blend color a and color b.
             </summary>
@@ -808,7 +818,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LighterColorBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.LighterColorBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             LighterColor mode blend color a and color b.
             </summary>
@@ -816,7 +826,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.OverlayBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.OverlayBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Overlay mode blend color a and color b.
             </summary>
@@ -824,7 +834,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.SoftLightBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.SoftLightBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             SoftLight mode blend color a and color b.
             </summary>
@@ -832,7 +842,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.HardLightBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.HardLightBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             HardLight mode blend color a and color b.
             </summary>
@@ -840,7 +850,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.VividLightBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.VividLightBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             VividLight mode blend color a and color b.
             </summary>
@@ -848,7 +858,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LinearLightBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.LinearLightBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             LinearLight mode blend color a and color b.
             </summary>
@@ -856,7 +866,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.PinLightBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.PinLightBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             PinLight mode blend color a and color b.
             </summary>
@@ -864,7 +874,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.HardMixBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.HardMixBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             HardMix mode blend color a and color b.
             </summary>
@@ -872,7 +882,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DifferenceBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.DifferenceBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Difference mode blend color a and color b.
             </summary>
@@ -880,7 +890,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ExclusionBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.ExclusionBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Exclusion mode blend color a and color b.
             </summary>
@@ -888,7 +898,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.SubtractBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.SubtractBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Subtract mode blend color a and color b.
             </summary>
@@ -896,7 +906,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.DivideBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.DivideBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Divide mode blend color a and color b.
             </summary>
@@ -904,7 +914,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.HueBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.HueBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Hue mode blend color a and color b.
             </summary>
@@ -912,7 +922,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.ColorBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.ColorBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Component-Color mode blend color a and color b.
             </summary>
@@ -920,7 +930,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.SaturationBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.SaturationBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Saturation mode blend color a and color b.
             </summary>
@@ -928,7 +938,7 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.ColorBlendUtility.LuminosityBlend(UnityEngine.Color,UnityEngine.Color)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.LuminosityBlend(UnityEngine.Color,UnityEngine.Color)">
             <summary>
             Luminosity mode blend color a and color b.
             </summary>
@@ -936,24 +946,24 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
-        <member name="T:MGS.UCommon.Utility.EventSystemUtility">
+        <member name="T:MGS.Common.Utility.EventSystemUtility">
             <summary>
             Utility for EventSystem.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Utility.EventSystemUtility.CheckPointerOverGameObject(UnityEngine.GameObject)">
+        <member name="M:MGS.Common.Utility.EventSystemUtility.CheckPointerOverGameObject(UnityEngine.GameObject)">
             <summary>
             Check mouse pointer is over target gameobject?
             </summary>
             <param name="target">Target gameobject.</param>
             <returns>Pointer is over target gameobject?</returns>
         </member>
-        <member name="T:MGS.UCommon.Utility.MeshUtility">
+        <member name="T:MGS.Common.Utility.MeshUtility">
             <summary>
             Utility for mesh.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Utility.MeshUtility.CreateVerticesBasePolygon(System.Int32,System.Single,UnityEngine.Vector3,UnityEngine.Quaternion)">
+        <member name="M:MGS.Common.Utility.MeshUtility.CreateVerticesBasePolygon(System.Int32,System.Single,UnityEngine.Vector3,UnityEngine.Quaternion)">
             <summary>
             Create vertices base on polygon.
             </summary>
@@ -963,7 +973,7 @@
             <param name="rotation">Rotation of polygon.</param>
             <returns>Vertices base on polygon.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.MeshUtility.CreateTrianglesBasePolygon(System.Int32,System.Int32,System.Int32,System.Boolean)">
+        <member name="M:MGS.Common.Utility.MeshUtility.CreateTrianglesBasePolygon(System.Int32,System.Int32,System.Int32,System.Boolean)">
             <summary>
             Create triangles index base on polygon and center vertice.
             </summary>
@@ -973,7 +983,7 @@
             <param name="clockwise">Triangle indexs is clockwise.</param>
             <returns>Triangles base on polygon.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.MeshUtility.CreateTrianglesBasePrism(System.Int32,System.Int32,System.Int32)">
+        <member name="M:MGS.Common.Utility.MeshUtility.CreateTrianglesBasePrism(System.Int32,System.Int32,System.Int32)">
             <summary>
             Create triangles index base on prism.
             </summary>
@@ -982,14 +992,14 @@
             <param name="start">Start index of prism vertice.</param>
             <returns>Triangles index base on prism.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.MeshUtility.CreateUVBasePolygon(System.Int32)">
+        <member name="M:MGS.Common.Utility.MeshUtility.CreateUVBasePolygon(System.Int32)">
             <summary>
             Create uv base on polygon.
             </summary>
             <param name="edge">Edge count of polygon.</param>
             <returns>UV base on polygon.</returns>
         </member>
-        <member name="M:MGS.UCommon.Utility.MeshUtility.CreateUVBasePrism(System.Int32,System.Int32)">
+        <member name="M:MGS.Common.Utility.MeshUtility.CreateUVBasePrism(System.Int32,System.Int32)">
             <summary>
             Create uv base on prism.
             </summary>
@@ -997,24 +1007,24 @@
             <param name="segment">Segment count of prism vertices vertical division.</param>
             <returns>UV base on prism.</returns>
         </member>
-        <member name="T:MGS.UCommon.Utility.RectUtility">
+        <member name="T:MGS.Common.Utility.RectUtility">
             <summary>
             Utility for RectTransform.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Utility.RectUtility.Mirror(UnityEngine.RectTransform,MGS.UCommon.Generic.MirrorMode)">
+        <member name="M:MGS.Common.Utility.RectUtility.Mirror(UnityEngine.RectTransform,MGS.Common.Generic.MirrorMode)">
             <summary>
             Mirror RectTransform.
             </summary>
             <param name="rect">Target RectTransform.</param>
             <param name="mode">Mode of mirror.</param>
         </member>
-        <member name="T:MGS.UCommon.Utility.VectorUtility">
+        <member name="T:MGS.Common.Utility.VectorUtility">
             <summary>
             Utility for unity vector.
             </summary>
         </member>
-        <member name="M:MGS.UCommon.Utility.VectorUtility.ProjectAngle(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+        <member name="M:MGS.Common.Utility.VectorUtility.ProjectAngle(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
             <summary>
             Calculate project angle of two vectors in the range(0~360).
             </summary>
