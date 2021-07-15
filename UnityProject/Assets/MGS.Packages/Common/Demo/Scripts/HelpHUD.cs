@@ -12,9 +12,9 @@
 
 using UnityEngine;
 
-namespace MGS.HUD
+namespace MGS.Common.HUD
 {
-    [AddComponentMenu("MGS/HUD/HelpHUD")]
+    [AddComponentMenu("MGS/Common/HelpHUD")]
     public class HelpHUD : MonoBehaviour
     {
         #region Field and Property
