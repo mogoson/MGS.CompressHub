@@ -17,7 +17,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MGS.Compress
+namespace MGS.Compress.Demo
 {
     //[AddComponentMenu("")]
     //[RequireComponent(typeof())]

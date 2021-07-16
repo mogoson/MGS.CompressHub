@@ -17,9 +17,13 @@
 - Decompress file to dest dir.
 
 ## Implemented
-- ICompressor: Interface for compressor.
-- ICompressManager: Interface for compress manager.
-- CompressManager: Instance for ICompressManager to manage compress  and decompress tasks.
+```C#
+public interface ICompressor{}
+
+public interface ICompressManager{}
+
+public sealed class CompressManager : SingleTimer<CompressManager>, ICompressManager{}
+```
 
 ## Usage
 ### Native
@@ -35,11 +39,11 @@
   CompressManager.Instance.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true,
       progress =>
       {
-          //Show progress.
+          //TODO: Show progress.
       },
       (isSucceed, info) =>
       {
-          //Show result.
+          //TODO: Show result.
           //if isSucceed==true, the type of info is string
           //and content is the path of zipFile;
           
@@ -57,10 +61,11 @@
   CompressManager.Instance.DecompressAsync(filePath, unzipDirPath, true,
       progress =>
       {
-          //Show progress.
+          //TODO: Show progress.
       },
       (isSucceed, info) =>
       {
+          //TODO: Show result.
           //if isSucceed==true, the type of info is string
           //and content is the path of unzip dir;
           
@@ -82,7 +87,7 @@
           Action<float> progressCallback = null,
           Action<bool, object> completeCallback = null)
       {
-          //Implemente compress logic.
+          //TODO: Implemente compress logic.
           //Usually completeCallback.Invoke(false, new Exception(msg)) on error.
       }
   
@@ -91,7 +96,7 @@
           Action<float> progressCallback = null,
           Action<bool, object> completeCallback = null)
       {
-          //Implemente decompress logic.
+          //TODO: Implemente decompress logic.
           //Usually completeCallback.Invoke(false, new Exception(msg)) on error.
       }
   }

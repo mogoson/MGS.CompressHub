@@ -1,23 +1,29 @@
 [TOC]
 
-# MGS.Compress
+﻿# MGS.Compress.dll
 
 ## Summary
-- Compress and decompress file.
+
+- Compress and decompress base Ionic.Zip.dll lib.
 
 ## Environment
-- Unity 5.0 or above.
+
 - .Net Framework 3.5 or above.
 
-## Platform
-- Windows.
+## Dependence
+
+- System.dll
+- Ionic.Zip.dll
+- MGS.DesignPattern.dll
 
 ## Demand
+
 - Compress entrie[file or directorie] to dest file.
 - Decompress file to dest dir.
 
 ## Implemented
-```C#
+
+```c#
 public interface ICompressor{}
 
 public interface ICompressManager{}
@@ -36,7 +42,8 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
   var rootDir = "TestRootDir";
   
   //CompressManager default with IonicCompressor to do compress and decompress tasks.
-  CompressManager.Instance.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true,
+  CompressManager.Instance.CompressAsync(new string[] { filePath }, 
+      zipFile, Encoding.UTF8, rootDir, true,
       progress =>
       {
           //TODO: Show progress.
@@ -44,10 +51,8 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
       (isSucceed, info) =>
       {
           //TODO: Show result.
-          //if isSucceed==true, the type of info is string
-          //and content is the path of zipFile;
-          
-          //if isSucceed==false, the type of info is Exception.
+          //if isSucceed==true, the info is the path of zipFile;
+          //if isSucceed==false, the info is error message.
       });
   ```
 
@@ -66,10 +71,8 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
       (isSucceed, info) =>
       {
           //TODO: Show result.
-          //if isSucceed==true, the type of info is string
-          //and content is the path of unzip dir;
-          
-          //if isSucceed==false, the type of info is Exception.
+          //if isSucceed==true, the info is the path of unzip dir;
+          //if isSucceed==false, the info is error message.
       });
   ```
 
@@ -105,11 +108,9 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
   CompressManager.Instance.Compressor = new CustomCompressor();
   ```
 
-## Demo
-- Demos in the path "MGS.Packages/Compress/Demo/" provide reference to you.
+------
 
-## Preview
-![Compress](./Attachment/images/Compress.PNG)
+[Previous](../../README.md)
 
 ------
 

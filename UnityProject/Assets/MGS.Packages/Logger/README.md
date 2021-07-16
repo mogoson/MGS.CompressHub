@@ -21,23 +21,18 @@
 
 ## Implemented
 
-### MGS.Logger.dll
+```C#
+public interface IFilter{}
 
-- ILogger: Interface of logger.
+public interface ILogger{}
 
-- LogUtility: provide unified entrance of log output.
-- FileLogger: provide a default logger that you can use to log to local file.
+public class FileLogger : ILogger{}
 
-### MGS.ULogger.dll
-
-- LogUtilityInitializer: Register a FileLogger to LogUtility.
-
-### MGS.ULoggerEditor.dll
-
-- UnityDebugger: Implemente ILogger base Unity Debug.
-- LogUtilityEditor: Register a UnityDebuggerto LogUtility.
+public sealed class LogUtility{}
+```
 
 ## Usage
+
 - Use LogUtility to output log content.
 
 ```C#
@@ -71,7 +66,7 @@ LogUtility.Register(new FileLogger(logDir, new Filter()));
 - Override log path.
 
 ```c#
-//Delete MGS.ULogger.dll
+//Override the LogUtilityInitializer.Awake();
 //new a FileLogger with custom log file path;
 //Register the FileLogger to LogUtility.
 
@@ -82,7 +77,7 @@ LogUtility.Register(new FileLogger(logDir));
 - Override the Logger of LogUtility.
 
 ```C#
-//Delete MGS.ULogger.dll
+//Override the LogUtilityInitializer.Awake();
 //Implemente a CustomLogger;
 //Register the CustomLogger to LogUtility.
 
@@ -90,17 +85,17 @@ public class CustomLogger : ILogger
 {
   public void Log(string format, params object[] args)
   {
-    //Implemente the logic.
+    //TODO: Implemente the logic.
   }
 
   public void LogError(string format, params object[] args)
   {
-    //Implemente the logic.
+    //TODO: Implemente the logic.
   }
 
   public void LogWarning(string format, params object[] args)
   {
-    //Implemente the logic.
+    //TODO: Implemente the logic.
   }
 }
 
