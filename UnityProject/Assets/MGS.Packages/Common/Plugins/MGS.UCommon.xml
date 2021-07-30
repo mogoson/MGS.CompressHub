@@ -582,16 +582,6 @@
         </member>
         <member name="M:MGS.Common.Serialization.JsonUtilityPro.FromJson``1(System.String)">
             <summary>
-            Deserialize List from json.
-            </summary>
-            <typeparam name="T">Type of List item.
-            The T must with SerializableAttribute and public field or private property with SerializeField Attribute if custom type.
-            </typeparam>
-            <param name="json">Json text of List.</param>
-            <returns>List object.</returns>
-        </member>
-        <member name="M:MGS.Common.Serialization.JsonUtilityPro.FromAvatarJson``1(System.String)">
-            <summary>
             Deserialize List from avatar json.
             </summary>
             <typeparam name="T">Type of List item.
@@ -601,16 +591,6 @@
             <returns>List object.</returns>
         </member>
         <member name="M:MGS.Common.Serialization.JsonUtilityPro.ToJson``1(System.Collections.Generic.List{``0})">
-            <summary>
-            Serialize List to json.
-            </summary>
-            <typeparam name="T">Type of List item.
-            The T must with SerializableAttribute and public field or private property with SerializeField Attribute if custom type.
-            </typeparam>
-            <param name="list">Source list.</param>
-            <returns>Json text of List.</returns>
-        </member>
-        <member name="M:MGS.Common.Serialization.JsonUtilityPro.ToAvatarJson``1(System.Collections.Generic.List{``0})">
             <summary>
             Serialize List to avatar json.
             </summary>
@@ -622,7 +602,7 @@
         </member>
         <member name="M:MGS.Common.Serialization.JsonUtilityPro.FromJson``2(System.String)">
             <summary>
-            Deserialize Dictionary from json.
+            Deserialize Dictionary from avatar json.
             </summary>
             <typeparam name="TKey">Type of Dictionary key.
             The T must with SerializableAttribute and public field or private property with SerializeField Attribute if custom type.

@@ -10,7 +10,6 @@
 
 ## Dependence
 - System.dll
-- MGS.Logger.dll
 
 ## Module
 

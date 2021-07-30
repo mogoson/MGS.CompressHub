@@ -175,21 +175,18 @@
             Start process from file.
             </summary>
             <param name="fileName">Path of process file.</param>
-            <returns>Succeed?</returns>
         </member>
         <member name="M:MGS.Common.Diagnostics.ProcessUtility.KillProcess(System.String)">
             <summary>
             Kill process by name.
             </summary>
             <param name="processName">Name of process.</param>
-            <returns>Succeed?</returns>
         </member>
         <member name="M:MGS.Common.Diagnostics.ProcessUtility.KillProcess(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
             Kill processes by names.
             </summary>
             <param name="processNames">Names of processes.</param>
-            <returns>Succeed?</returns>
         </member>
         <member name="T:MGS.Common.IO.DirectoryUtility">
             <summary>
@@ -201,7 +198,6 @@
             Require the directory of path exist.
             </summary>
             <param name="path">Directory or file path.</param>
-            <returns>Succeed?</returns>
         </member>
         <member name="M:MGS.Common.IO.DirectoryUtility.CopyChildrenEntries(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Single},System.Action{System.Boolean,System.Exception})">
             <summary>
@@ -267,7 +263,6 @@
             </summary>
             <param name="key">Key for cache file.</param>
             <param name="destFile"></param>
-            <returns>Is Succeed?</returns>
         </member>
         <member name="M:MGS.Common.IO.FileCache.Clear(System.String)">
             <summary>
@@ -290,7 +285,7 @@
             Calculate page count of file.
             </summary>
             <param name="filePath">Path of target file.</param>
-            <param name="pageSize">Size of page.</param>
+            <param name="pageSize">Size of page (byte).</param>
             <returns>Page count of file.</returns>
         </member>
         <member name="M:MGS.Common.IO.FileUtility.ReadPage(System.String,System.Int32,System.Int32)">
@@ -298,7 +293,7 @@
             Read the index page of file.
             </summary>
             <param name="filePath">Path of target file.</param>
-            <param name="pageSize">Size of page.</param>
+            <param name="pageSize">Size of page (byte).</param>
             <param name="pageIndex">Index of page.</param>
             <returns>Index page bytes.</returns>
         </member>
@@ -340,6 +335,22 @@
             </summary>
             <param name="filePath">Path of source file.</param>
             <returns>Hash code.</returns>
+        </member>
+        <member name="T:MGS.Common.Search.Searcher">
+            <summary>
+            Utility for search.
+            </summary>
+        </member>
+        <member name="M:MGS.Common.Search.Searcher.BinarySearch``2(``0[],``1,System.Func{``0,``1,System.Int32})">
+            <summary>
+            Binary search the item from array that match the key.
+            </summary>
+            <typeparam name="T">Type of array item.</typeparam>
+            <typeparam name="K">Type of key.</typeparam>
+            <param name="array">Source array (Ordered by key).</param>
+            <param name="key">Key to match item.</param>
+            <param name="compare">Func to compare item and key; return 0 if equal, 1 if greater, -1 if less.</param>
+            <returns>The match item or default of type T if not match.</returns>
         </member>
         <member name="T:MGS.Common.Threading.MutexUtility">
             <summary>

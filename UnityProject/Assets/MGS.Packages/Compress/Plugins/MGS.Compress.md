@@ -28,7 +28,7 @@ public interface ICompressor{}
 
 public interface ICompressManager{}
 
-public sealed class CompressManager : SingleTimer<CompressManager>, ICompressManager{}
+public sealed class CompressManager : SingleUpdater<CompressManager>, ICompressManager{}
 ```
 
 ## Usage
@@ -48,14 +48,12 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
       {
           //TODO: Show progress.
       },
-      (isSucceed, info) =>
+      (isSucceed, info, error) =>
       {
           //TODO: Show result.
-          //if isSucceed==true, the info is the path of zipFile;
-          //if isSucceed==false, the info is error message.
       });
   ```
-
+  
 - Decompress async.
 
   ```C#
@@ -68,11 +66,9 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
       {
           //TODO: Show progress.
       },
-      (isSucceed, info) =>
+      (isSucceed, info, error) =>
       {
           //TODO: Show result.
-          //if isSucceed==true, the info is the path of unzip dir;
-          //if isSucceed==false, the info is error message.
       });
   ```
 
@@ -88,19 +84,17 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
           Encoding encoding, string directoryPathInArchive = null,
           bool clearBefor = true,
           Action<float> progressCallback = null,
-          Action<bool, object> completeCallback = null)
+          Action<bool, string, Exception> completeCallback = null)
       {
           //TODO: Implemente compress logic.
-          //Usually completeCallback.Invoke(false, new Exception(msg)) on error.
       }
   
       public void Decompress(string filePath, string destDir,
           bool clearBefor = true,
           Action<float> progressCallback = null,
-          Action<bool, object> completeCallback = null)
+          Action<bool, string, Exception> completeCallback = null)
       {
           //TODO: Implemente decompress logic.
-          //Usually completeCallback.Invoke(false, new Exception(msg)) on error.
       }
   }
   

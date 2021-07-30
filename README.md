@@ -36,21 +36,18 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
   var rootDir = "TestRootDir";
   
   //CompressManager default with IonicCompressor to do compress and decompress tasks.
-  CompressManager.Instance.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true,
+  CompressManager.Instance.CompressAsync(new string[] { filePath }, 
+      zipFile, Encoding.UTF8, rootDir, true,
       progress =>
       {
           //TODO: Show progress.
       },
-      (isSucceed, info) =>
+      (isSucceed, info, error) =>
       {
           //TODO: Show result.
-          //if isSucceed==true, the type of info is string
-          //and content is the path of zipFile;
-          
-          //if isSucceed==false, the type of info is Exception.
       });
   ```
-
+  
 - Decompress async.
 
   ```C#
@@ -63,13 +60,9 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
       {
           //TODO: Show progress.
       },
-      (isSucceed, info) =>
+      (isSucceed, info, error) =>
       {
           //TODO: Show result.
-          //if isSucceed==true, the type of info is string
-          //and content is the path of unzip dir;
-          
-          //if isSucceed==false, the type of info is Exception.
       });
   ```
 
@@ -85,19 +78,17 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
           Encoding encoding, string directoryPathInArchive = null,
           bool clearBefor = true,
           Action<float> progressCallback = null,
-          Action<bool, object> completeCallback = null)
+          Action<bool, string, Exception> completeCallback = null)
       {
           //TODO: Implemente compress logic.
-          //Usually completeCallback.Invoke(false, new Exception(msg)) on error.
       }
   
       public void Decompress(string filePath, string destDir,
           bool clearBefor = true,
           Action<float> progressCallback = null,
-          Action<bool, object> completeCallback = null)
+          Action<bool, string, Exception> completeCallback = null)
       {
           //TODO: Implemente decompress logic.
-          //Usually completeCallback.Invoke(false, new Exception(msg)) on error.
       }
   }
   

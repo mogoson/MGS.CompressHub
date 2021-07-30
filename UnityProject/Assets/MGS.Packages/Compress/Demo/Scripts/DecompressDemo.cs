@@ -71,18 +71,27 @@ namespace MGS.Compress.Demo
                 {
                     Dispatcher.BeginInvoke(() =>
                     {
+                        //Refresh UI in main thread.
                         sbar_Progress.size = progress;
                     });
                 },
-                (isSucceed, info) =>
+                (isSucceed, info, error) =>
                 {
+                    if (isSucceed)
+                    {
+                        Debug.Log(info);
+                    }
+                    else
+                    {
+                        info = error.Message;
+                        Debug.LogError(info);
+                    }
+
                     Dispatcher.BeginInvoke(() =>
                     {
+                        //Refresh UI in main thread.
                         btn_StartUnzip.interactable = true;
-                        txt_Info.text = info.ToString();
-
-                        if (isSucceed) { Debug.Log(info); }
-                        else { Debug.LogError(info); }
+                        txt_Info.text = info;
                     });
                 });
         }

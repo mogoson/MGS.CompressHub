@@ -39,12 +39,11 @@
             Constructor.
             </summary>
         </member>
-        <member name="M:MGS.Compress.CompressManager.Tick(System.Object,System.Timers.ElapsedEventArgs)">
+        <member name="M:MGS.Compress.CompressManager.Update(System.DateTime)">
             <summary>
-            Timer tick.
+            On update event.
             </summary>
-            <param name="sender">Event sender.</param>
-            <param name="e">Event args.</param>
+            <param name="signalTime">Signal time.</param>
         </member>
         <member name="M:MGS.Compress.CompressManager.AddTask(MGS.Compress.ITask)">
             <summary>
@@ -85,7 +84,7 @@
             <param name="task"></param>
             <returns>Task is runnable?</returns>
         </member>
-        <member name="M:MGS.Compress.CompressManager.CompressAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.CompressManager.CompressAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Compress entrie[files or directories] to dest file async.
             </summary>
@@ -97,7 +96,7 @@
             <param name="progressCallback">Progress callback.</param>
             <param name="finishedCallback">Finished callback.</param>
         </member>
-        <member name="M:MGS.Compress.CompressManager.DecompressAsync(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.CompressManager.DecompressAsync(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Decompress file to dest dir async.
             </summary>
@@ -112,7 +111,7 @@
             Ionic compressor.
             </summary>
         </member>
-        <member name="M:MGS.Compress.IonicCompressor.Compress(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.IonicCompressor.Compress(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Compress entrie[file or directorie] to dest zip file.
             </summary>
@@ -124,7 +123,7 @@
             <param name="progressCallback">Progress callback.</param>
             <param name="finishedCallback">Finished callback.</param>
         </member>
-        <member name="M:MGS.Compress.IonicCompressor.Decompress(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.IonicCompressor.Decompress(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Decompress zip file to dest dir.
             </summary>
@@ -149,7 +148,7 @@
             Max count of async operate run in parallel.
             </summary>
         </member>
-        <member name="M:MGS.Compress.ICompressManager.CompressAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.ICompressManager.CompressAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Compress entrie[files or directories] to dest file async.
             </summary>
@@ -161,7 +160,7 @@
             <param name="progressCallback">Progress callback.</param>
             <param name="finishedCallback">Finished callback.</param>
         </member>
-        <member name="M:MGS.Compress.ICompressManager.DecompressAsync(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.ICompressManager.DecompressAsync(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Decompress file to dest dir async.
             </summary>
@@ -176,7 +175,7 @@
             Interface for compressor.
             </summary>
         </member>
-        <member name="M:MGS.Compress.ICompressor.Compress(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.ICompressor.Compress(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Compress entrie[file or directorie] to dest file.
             </summary>
@@ -188,7 +187,7 @@
             <param name="progressCallback">Progress callback.</param>
             <param name="finishedCallback">Finished callback.</param>
         </member>
-        <member name="M:MGS.Compress.ICompressor.Decompress(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.ICompressor.Decompress(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Decompress file to dest dir.
             </summary>
@@ -253,7 +252,7 @@
             Entries associated with the task.
             </summary>
         </member>
-        <member name="M:MGS.Compress.AsyncTask.#ctor(MGS.Compress.ICompressor,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.AsyncTask.#ctor(MGS.Compress.ICompressor,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Constructor.
             </summary>
@@ -282,7 +281,7 @@
             Entries associated with the task.
             </summary>
         </member>
-        <member name="M:MGS.Compress.AsyncCompressTask.#ctor(MGS.Compress.ICompressor,System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.AsyncCompressTask.#ctor(MGS.Compress.ICompressor,System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Constructor.
             </summary>
@@ -310,7 +309,7 @@
             Entries associated with the task.
             </summary>
         </member>
-        <member name="M:MGS.Compress.AsyncDecompressTask.#ctor(MGS.Compress.ICompressor,System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.Object})">
+        <member name="M:MGS.Compress.AsyncDecompressTask.#ctor(MGS.Compress.ICompressor,System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String,System.Exception})">
             <summary>
             Constructor.
             </summary>
