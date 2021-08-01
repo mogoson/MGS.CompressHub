@@ -114,7 +114,7 @@ public sealed class TestSingleUpdater : SingleUpdater<TestSingleUpdater>
     //Private parameterless constructor to ensure singleton.
     private TestSingleUpdater() { }
 
-    protected override void Update(DateTime signalTime)
+    protected override void Update()
     {
         //TODO: do something on update.
     }

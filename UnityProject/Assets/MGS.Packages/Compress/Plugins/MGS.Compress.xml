@@ -39,11 +39,10 @@
             Constructor.
             </summary>
         </member>
-        <member name="M:MGS.Compress.CompressManager.Update(System.DateTime)">
+        <member name="M:MGS.Compress.CompressManager.Update">
             <summary>
             On update event.
             </summary>
-            <param name="signalTime">Signal time.</param>
         </member>
         <member name="M:MGS.Compress.CompressManager.AddTask(MGS.Compress.ITask)">
             <summary>

@@ -123,9 +123,9 @@
             Enabled of update.
             </summary>
         </member>
-        <member name="P:MGS.DesignPattern.SingleUpdater`1.Timer">
+        <member name="F:MGS.DesignPattern.SingleUpdater`1.thread">
             <summary>
-            The timer to update.
+            The thread to update.
             </summary>
         </member>
         <member name="M:MGS.DesignPattern.SingleUpdater`1.#ctor">
@@ -133,11 +133,15 @@
             Constructor.
             </summary>
         </member>
-        <member name="M:MGS.DesignPattern.SingleUpdater`1.Update(System.DateTime)">
+        <member name="M:MGS.DesignPattern.SingleUpdater`1.Start">
             <summary>
-            On update event.
+            On thread start event.
             </summary>
-            <param name="signalTime">Signal time.</param>
+        </member>
+        <member name="M:MGS.DesignPattern.SingleUpdater`1.Update">
+            <summary>
+            On thread update event.
+            </summary>
         </member>
         <member name="T:MGS.DesignPattern.Singleton`1">
             <summary>
