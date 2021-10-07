@@ -206,256 +206,6 @@
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
-        <member name="T:MGS.Common.Generic.Axis">
-            <summary>
-            Coordinate axis.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.Axis.X">
-            <summary>
-            X axis.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.Axis.Y">
-            <summary>
-            Y axis.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.Axis.Z">
-            <summary>
-            Z axis.
-            </summary>
-        </member>
-        <member name="T:MGS.Common.Generic.ColorBlendMode">
-            <summary>
-            Mode of color blend.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Normal">
-            <summary>
-            Normal-Normal Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Dissolve">
-            <summary>
-            Normal-Dissolve Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Darken">
-            <summary>
-            Darken-Darken Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Multiply">
-            <summary>
-            Darken-Multiply Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.ColorBurn">
-            <summary>
-            Darken-ColorBurn Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.LinearBurn">
-            <summary>
-            Darken-LinearBurn Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.DarkerColor">
-            <summary>
-            Darken-DarkerColor Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Lighten">
-            <summary>
-            Lighten-Lighten Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Screen">
-            <summary>
-            Lighten-Screen Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.ColorDodge">
-            <summary>
-            Lighten-ColorDodge Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.LinearDodge">
-            <summary>
-            Lighten-LinearDodge Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.LighterColor">
-            <summary>
-            Lighten-LighterColor Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Overlay">
-            <summary>
-            Contrast-Overlay Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.SoftLight">
-            <summary>
-            Contrast-SoftLight Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.HardLight">
-            <summary>
-            Contrast-HardLight Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.VividLight">
-            <summary>
-            Contrast-VividLight Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.LinearLight">
-            <summary>
-            Contrast-LinearLight Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.PinLight">
-            <summary>
-            Contrast-PinLight Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.HardMix">
-            <summary>
-            Contrast-HardMix Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Difference">
-            <summary>
-            Cancelation-Difference Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Exclusion">
-            <summary>
-            Cancelation-Exclusion Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Subtract">
-            <summary>
-            Cancelation-Subtract Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Divide">
-            <summary>
-            Cancelation-Divide Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Hue">
-            <summary>
-            Component-Hue Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Color">
-            <summary>
-            Component-Color Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Saturation">
-            <summary>
-            Component-Saturation Mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.ColorBlendMode.Luminosity">
-            <summary>
-            Component-Luminosity Mode.
-            </summary>
-        </member>
-        <member name="T:MGS.Common.Generic.LerpMode">
-            <summary>
-            Lerp mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.LerpMode.Lerp">
-            <summary>
-            Lerp mode.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.LerpMode.Towards">
-            <summary>
-            Towards mode.
-            </summary>
-        </member>
-        <member name="T:MGS.Common.Generic.MirrorMode">
-            <summary>
-            Mode of mirror.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.MirrorMode.Horizontal">
-            <summary>
-            Horizontal mirror.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.MirrorMode.Vertical">
-            <summary>
-            Vertical mirror.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.MirrorMode.Both">
-            <summary>
-            Both horizontal and vertical mirror.
-            </summary>
-        </member>
-        <member name="T:MGS.Common.Generic.Range">
-            <summary>
-            Range form min to max.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.Range.min">
-            <summary>
-            Min value of range.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.Range.max">
-            <summary>
-            Max value of range.
-            </summary>
-        </member>
-        <member name="P:MGS.Common.Generic.Range.Length">
-            <summary>
-            Length of range from min to max.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.Range.#ctor(System.Single,System.Single)">
-            <summary>
-            Constructor.
-            </summary>
-            <param name="min">Min value of range.</param>
-            <param name="max">Max value of range.</param>
-        </member>
-        <member name="T:MGS.Common.Generic.PlaneArea">
-            <summary>
-            Rectangle area on plane.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.PlaneArea.center">
-            <summary>
-            Center of area.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.PlaneArea.width">
-            <summary>
-            Width of area.
-            </summary>
-        </member>
-        <member name="F:MGS.Common.Generic.PlaneArea.length">
-            <summary>
-            Length of area.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Generic.PlaneArea.#ctor(UnityEngine.Transform,System.Single,System.Single)">
-            <summary>
-            Constructor.
-            </summary>
-            <param name="center">Center of area.</param>
-            <param name="width">Width of area.</param>
-            <param name="length">Length of area.</param>
-        </member>
         <member name="T:MGS.Common.Extension.GameObjectExtention">
             <summary>
             Extention for UnityEngine.GameObject.
@@ -503,27 +253,7 @@
             <param name="updateMipmaps">When set to true, mipmap levels are recalculated.</param>
             <param name="makeNointerReadable">When set to true, system memory copy of a texture is released.</param>
         </member>
-        <member name="M:MGS.Common.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color[0:,0:],System.Int32,System.Boolean,System.Boolean)">
-            <summary>
-            Update the pixels of Texture2D.
-            </summary>
-            <param name="texture2D">Base Texture2D.</param>
-            <param name="colorArray">Color array for pixels.</param>
-            <param name="mipLevel">The mip level of the texture to write to.</param>
-            <param name="updateMipmaps">When set to true, mipmap levels are recalculated.</param>
-            <param name="makeNointerReadable">When set to true, system memory copy of a texture is released.</param>
-        </member>
         <member name="M:MGS.Common.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color32[],System.Int32,System.Boolean,System.Boolean)">
-            <summary>
-            Update the pixels of Texture2D.
-            </summary>
-            <param name="texture2D">Base Texture2D.</param>
-            <param name="colorArray">Color array for pixels.</param>
-            <param name="mipLevel">The mip level of the texture to write to.</param>
-            <param name="updateMipmaps">When set to true, mipmap levels are recalculated.</param>
-            <param name="makeNointerReadable">When set to true, system memory copy of a texture is released.</param>
-        </member>
-        <member name="M:MGS.Common.Extension.Texture2DExtention.UpdatePixels(UnityEngine.Texture2D,UnityEngine.Color32[0:,0:],System.Int32,System.Boolean,System.Boolean)">
             <summary>
             Update the pixels of Texture2D.
             </summary>
@@ -653,11 +383,6 @@
             Source list.
             </summary>
         </member>
-        <member name="P:MGS.Common.Serialization.ListAvatar`1.Source">
-            <summary>
-            Source list.
-            </summary>
-        </member>
         <member name="M:MGS.Common.Serialization.ListAvatar`1.#ctor(System.Collections.Generic.List{`0})">
             <summary>
             Constructor.
@@ -701,7 +426,7 @@
             Utility for color blend.
             </summary>
         </member>
-        <member name="M:MGS.Common.Utility.ColorBlendUtility.Blend(UnityEngine.Color,UnityEngine.Color,MGS.Common.Generic.ColorBlendMode)">
+        <member name="M:MGS.Common.Utility.ColorBlendUtility.Blend(UnityEngine.Color,UnityEngine.Color,MGS.Common.Utility.ColorBlendMode)">
             <summary>
             Blend color a and color b.
             </summary>
@@ -926,78 +651,157 @@
             <param name="b">Color b.</param>
             <returns>Blended color.</returns>
         </member>
+        <member name="T:MGS.Common.Utility.ColorBlendMode">
+            <summary>
+            Mode of color blend.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Normal">
+            <summary>
+            Normal-Normal Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Dissolve">
+            <summary>
+            Normal-Dissolve Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Darken">
+            <summary>
+            Darken-Darken Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Multiply">
+            <summary>
+            Darken-Multiply Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.ColorBurn">
+            <summary>
+            Darken-ColorBurn Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.LinearBurn">
+            <summary>
+            Darken-LinearBurn Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.DarkerColor">
+            <summary>
+            Darken-DarkerColor Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Lighten">
+            <summary>
+            Lighten-Lighten Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Screen">
+            <summary>
+            Lighten-Screen Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.ColorDodge">
+            <summary>
+            Lighten-ColorDodge Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.LinearDodge">
+            <summary>
+            Lighten-LinearDodge Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.LighterColor">
+            <summary>
+            Lighten-LighterColor Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Overlay">
+            <summary>
+            Contrast-Overlay Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.SoftLight">
+            <summary>
+            Contrast-SoftLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.HardLight">
+            <summary>
+            Contrast-HardLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.VividLight">
+            <summary>
+            Contrast-VividLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.LinearLight">
+            <summary>
+            Contrast-LinearLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.PinLight">
+            <summary>
+            Contrast-PinLight Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.HardMix">
+            <summary>
+            Contrast-HardMix Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Difference">
+            <summary>
+            Cancelation-Difference Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Exclusion">
+            <summary>
+            Cancelation-Exclusion Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Subtract">
+            <summary>
+            Cancelation-Subtract Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Divide">
+            <summary>
+            Cancelation-Divide Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Hue">
+            <summary>
+            Component-Hue Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Color">
+            <summary>
+            Component-Color Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Saturation">
+            <summary>
+            Component-Saturation Mode.
+            </summary>
+        </member>
+        <member name="F:MGS.Common.Utility.ColorBlendMode.Luminosity">
+            <summary>
+            Component-Luminosity Mode.
+            </summary>
+        </member>
         <member name="T:MGS.Common.Utility.EventSystemUtility">
             <summary>
             Utility for EventSystem.
             </summary>
         </member>
-        <member name="M:MGS.Common.Utility.EventSystemUtility.CheckPointerOverGameObject(UnityEngine.GameObject)">
+        <member name="M:MGS.Common.Utility.EventSystemUtility.CheckPointerIsOver(UnityEngine.GameObject)">
             <summary>
             Check mouse pointer is over target gameobject?
             </summary>
             <param name="target">Target gameobject.</param>
             <returns>Pointer is over target gameobject?</returns>
-        </member>
-        <member name="T:MGS.Common.Utility.MeshUtility">
-            <summary>
-            Utility for mesh.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Utility.MeshUtility.CreateVerticesBasePolygon(System.Int32,System.Single,UnityEngine.Vector3,UnityEngine.Quaternion)">
-            <summary>
-            Create vertices base on polygon.
-            </summary>
-            <param name="edge">Edge count of polygon.</param>
-            <param name="radius">Radius of polygon.</param>
-            <param name="center">Center of polygon.</param>
-            <param name="rotation">Rotation of polygon.</param>
-            <returns>Vertices base on polygon.</returns>
-        </member>
-        <member name="M:MGS.Common.Utility.MeshUtility.CreateTrianglesBasePolygon(System.Int32,System.Int32,System.Int32,System.Boolean)">
-            <summary>
-            Create triangles index base on polygon and center vertice.
-            </summary>
-            <param name="edge">Edge count of polygon.</param>
-            <param name="center">Index of center vertice.</param>
-            <param name="start">Index of start vertice.</param>
-            <param name="clockwise">Triangle indexs is clockwise.</param>
-            <returns>Triangles base on polygon.</returns>
-        </member>
-        <member name="M:MGS.Common.Utility.MeshUtility.CreateTrianglesBasePrism(System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Create triangles index base on prism.
-            </summary>
-            <param name="polygon">Edge count of prism polygon.</param>
-            <param name="segment">Segment count of prism vertices vertical division.</param>
-            <param name="start">Start index of prism vertice.</param>
-            <returns>Triangles index base on prism.</returns>
-        </member>
-        <member name="M:MGS.Common.Utility.MeshUtility.CreateUVBasePolygon(System.Int32)">
-            <summary>
-            Create uv base on polygon.
-            </summary>
-            <param name="edge">Edge count of polygon.</param>
-            <returns>UV base on polygon.</returns>
-        </member>
-        <member name="M:MGS.Common.Utility.MeshUtility.CreateUVBasePrism(System.Int32,System.Int32)">
-            <summary>
-            Create uv base on prism.
-            </summary>
-            <param name="polygon">Edge count of prism polygon.</param>
-            <param name="segment">Segment count of prism vertices vertical division.</param>
-            <returns>UV base on prism.</returns>
-        </member>
-        <member name="T:MGS.Common.Utility.RectUtility">
-            <summary>
-            Utility for RectTransform.
-            </summary>
-        </member>
-        <member name="M:MGS.Common.Utility.RectUtility.Mirror(UnityEngine.RectTransform,MGS.Common.Generic.MirrorMode)">
-            <summary>
-            Mirror RectTransform.
-            </summary>
-            <param name="rect">Target RectTransform.</param>
-            <param name="mode">Mode of mirror.</param>
         </member>
         <member name="T:MGS.Common.Utility.VectorUtility">
             <summary>

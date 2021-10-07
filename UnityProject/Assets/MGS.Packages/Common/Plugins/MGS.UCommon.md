@@ -12,6 +12,7 @@
 ## Dependence
 - System.dll
 - MGS.Common.dll
+- MGS.Logger.dll
 - UnityEngine.dll
 - UnityEngine.UI.dll
 
@@ -50,8 +51,6 @@ public class MonoSelectListener : MonoBehaviour, ISelectHandler, IUpdateSelected
 ```
 
 ### Serialization
-
-**Unity 5.3 or above**.
 
 ```C#
 public class ListAvatar<T>{}
