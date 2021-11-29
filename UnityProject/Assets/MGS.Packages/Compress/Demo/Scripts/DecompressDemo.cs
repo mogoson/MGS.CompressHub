@@ -1,5 +1,5 @@
-/*************************************************************************
- *  Copyright (c) 2021 Mogoson. All rights reserved.
+﻿/*************************************************************************
+ *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
  *  File         :  DecompressDemo.cs
  *  Description  :  Null.
@@ -10,7 +10,6 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using MGS.Common.Threading;
 using System;
 using System.IO;
 using UnityEngine;
@@ -18,12 +17,8 @@ using UnityEngine.UI;
 
 namespace MGS.Compress.Demo
 {
-    //[AddComponentMenu("")]
-    //[RequireComponent(typeof())]
-    public class DecompressDemo : MonoBehaviour
+    public class DecompressDemo : MonoCompress
     {
-        #region Field and Property
-        //  [Tooltip("")]
         [SerializeField]
         InputField ipt_ZipFile;
 
@@ -38,25 +33,16 @@ namespace MGS.Compress.Demo
 
         [SerializeField]
         Text txt_Info;
-        #endregion
 
-        #region Private Method
-        // Use this for initialization.
         void Start()
         {
             ipt_ZipFile.text = string.Format("{0}/TestZipDir/TestZipFile.zip", Environment.CurrentDirectory);
             ipt_UnzipDir.text = "TestUnzipDir";
 
-            btn_StartUnzip.onClick.AddListener(OnBtn_StartUnzip_Click);
+            btn_StartUnzip.onClick.AddListener(OnBtnStartUnzipClick);
         }
 
-        // Update is called once per frame.
-        //void Update()
-        //{
-
-        //}
-
-        void OnBtn_StartUnzip_Click()
+        void OnBtnStartUnzipClick()
         {
             btn_StartUnzip.interactable = false;
             sbar_Progress.size = 0;
@@ -66,10 +52,10 @@ namespace MGS.Compress.Demo
             var unzipDirName = ipt_UnzipDir.text.Trim();
             var unzipDirPath = string.Format("{0}/{1}/", Path.GetDirectoryName(filePath), unzipDirName);
 
-            CompressManager.Instance.DecompressAsync(filePath, unzipDirPath, true,
+            CompressProcessor.Instance.DecompressAsync(filePath, unzipDirPath, true,
                 progress =>
                 {
-                    Dispatcher.BeginInvoke(() =>
+                    BeginInvoke(() =>
                     {
                         //Refresh UI in main thread.
                         sbar_Progress.size = progress;
@@ -87,7 +73,7 @@ namespace MGS.Compress.Demo
                         Debug.LogError(info);
                     }
 
-                    Dispatcher.BeginInvoke(() =>
+                    BeginInvoke(() =>
                     {
                         //Refresh UI in main thread.
                         btn_StartUnzip.interactable = true;
@@ -95,9 +81,5 @@ namespace MGS.Compress.Demo
                     });
                 });
         }
-        #endregion
-
-        #region Public Method
-        #endregion
     }
 }

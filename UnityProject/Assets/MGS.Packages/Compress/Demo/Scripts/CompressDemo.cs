@@ -1,5 +1,5 @@
-/*************************************************************************
- *  Copyright (c) 2021 Mogoson. All rights reserved.
+﻿/*************************************************************************
+ *  Copyright © 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
  *  File         :  CompressDemo.cs
  *  Description  :  Null.
@@ -10,7 +10,6 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using MGS.Common.Threading;
 using System;
 using System.IO;
 using System.Text;
@@ -19,12 +18,8 @@ using UnityEngine.UI;
 
 namespace MGS.Compress.Demo
 {
-    //[AddComponentMenu("")]
-    //[RequireComponent(typeof())]
-    public class CompressDemo : MonoBehaviour
+    public class CompressDemo : MonoCompress
     {
-        #region Field and Property
-        //  [Tooltip("")]
         [SerializeField]
         InputField ipt_FilePath;
 
@@ -42,26 +37,17 @@ namespace MGS.Compress.Demo
 
         [SerializeField]
         Text txt_Info;
-        #endregion
 
-        #region Private Method
-        // Use this for initialization.
         void Start()
         {
             ipt_FilePath.text = string.Format("{0}/TestZipDir/", Environment.CurrentDirectory);
             ipt_ZipName.text = "TestZipFile.zip";
             ipt_RootDir.text = "CustomRootDir";
 
-            btn_StartZip.onClick.AddListener(OnBtn_StartZip_Click);
+            btn_StartZip.onClick.AddListener(OnBtnStartZipClick);
         }
 
-        // Update is called once per frame.
-        //void Update()
-        //{
-
-        //}
-
-        void OnBtn_StartZip_Click()
+        void OnBtnStartZipClick()
         {
             btn_StartZip.interactable = false;
             sbar_Progress.size = 0;
@@ -72,10 +58,10 @@ namespace MGS.Compress.Demo
             var zipFile = string.Format("{0}/{1}", Path.GetDirectoryName(filePath), zipName);
             var rootDir = ipt_RootDir.text.Trim();
 
-            CompressManager.Instance.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true,
+            CompressProcessor.Instance.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true,
                 progress =>
                 {
-                    Dispatcher.BeginInvoke(() =>
+                    BeginInvoke(() =>
                     {
                         //Refresh UI in main thread.
                         sbar_Progress.size = progress;
@@ -93,7 +79,7 @@ namespace MGS.Compress.Demo
                         Debug.LogError(info);
                     }
 
-                    Dispatcher.BeginInvoke(() =>
+                    BeginInvoke(() =>
                     {
                         //Refresh UI in main thread.
                         btn_StartZip.interactable = true;
@@ -101,9 +87,5 @@ namespace MGS.Compress.Demo
                     });
                 });
         }
-        #endregion
-
-        #region Public Method
-        #endregion
     }
 }

@@ -16,15 +16,6 @@
 - Compress entrie[file or directorie] to dest file.
 - Decompress file to dest dir.
 
-## Implemented
-```C#
-public interface ICompressor{}
-
-public interface ICompressManager{}
-
-public sealed class CompressManager : SingleTimer<CompressManager>, ICompressManager{}
-```
-
 ## Usage
 ### Native
 
@@ -97,7 +88,7 @@ public sealed class CompressManager : SingleTimer<CompressManager>, ICompressMan
   ```
 
 ## Demo
-- Demos in the path "MGS.Packages/Compress/Demo/" provide reference to you.
+- Demos in the path "./Demo/" provide reference to you.
 
 ## Preview
 ![Compress](./Attachment/images/Compress.PNG)
