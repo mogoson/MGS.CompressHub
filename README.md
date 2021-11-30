@@ -88,7 +88,7 @@
   ```
 
 ## Demo
-- Demos in the path "./Demo/" provide reference to you.
+- Demos in the path "MGS.Packages/Compress/Demo/" provide reference to you.
 
 ## Preview
 ![Compress](./Attachment/images/Compress.PNG)
