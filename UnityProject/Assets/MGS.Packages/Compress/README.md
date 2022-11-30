@@ -12,6 +12,10 @@
 ## Platform
 - Windows.
 
+## Version
+
+- 1.2.0
+
 ## Demand
 - Compress entrie[file or directorie] to dest file.
 - Decompress file to dest dir.
