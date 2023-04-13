@@ -1,39 +1,37 @@
 ﻿/*************************************************************************
- *  Copyright © 2021 Mogoson. All rights reserved.
+ *  Copyright © 2022 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  MonoCompress.cs
- *  Description  :  Null.
+ *  File         :  TestNet.cs
+ *  Description  :  Ignore.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
- *  Version      :  0.1.0
- *  Date         :  6/5/2021
+ *  Version      :  1.0
+ *  Date         :  7/20/2022
  *  Description  :  Initial development version.
  *************************************************************************/
 
 using UnityEngine;
 
-namespace MGS.Work.Compress.Demo
+namespace MGS.Work.Net.Demo
 {
-    public abstract class MonoCompress : MonoBehaviour
+    public class TestNet : MonoBehaviour
     {
-        protected ICompressHub hub;
+        public string url;
+        protected INetWorkHub hub;
         protected IAsyncWorkHandler<string> handler;
 
-        void Awake()
+        protected virtual void Start()
         {
-            hub = CompressHubFactory.CreateHub();
+            hub = NetWorkHubFatory.CreateHub();
         }
 
-        void OnDestroy()
+        protected virtual void OnDestroy()
         {
+            handler.Dispose();
+            handler = null;
+
             hub.Dispose();
             hub = null;
-
-            if (handler != null)
-            {
-                handler.Dispose();
-                handler = null;
-            }
         }
     }
 }

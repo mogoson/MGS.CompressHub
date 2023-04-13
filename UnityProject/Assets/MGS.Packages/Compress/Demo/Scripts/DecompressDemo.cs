@@ -10,12 +10,11 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using System;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MGS.Compress.Demo
+namespace MGS.Work.Compress.Demo
 {
     public class DecompressDemo : MonoCompress
     {
@@ -36,7 +35,7 @@ namespace MGS.Compress.Demo
 
         void Start()
         {
-            ipt_ZipFile.text = string.Format("{0}/TestZipDir/TestZipFile.zip", Environment.CurrentDirectory);
+            ipt_ZipFile.text = $"{Application.dataPath}/TestZipDir/TestZipFile.zip";
             ipt_UnzipDir.text = "TestUnzipDir";
 
             btn_StartUnzip.onClick.AddListener(OnBtnStartUnzipClick);
@@ -50,36 +49,28 @@ namespace MGS.Compress.Demo
 
             var filePath = ipt_ZipFile.text.Trim();
             var unzipDirName = ipt_UnzipDir.text.Trim();
-            var unzipDirPath = string.Format("{0}/{1}/", Path.GetDirectoryName(filePath), unzipDirName);
+            var unzipDirPath = $"{Path.GetDirectoryName(filePath)}/{unzipDirName}/";
 
-            CompressProcessor.Instance.DecompressAsync(filePath, unzipDirPath, true,
-                progress =>
+            handler = hub.DecompressAsync(filePath, unzipDirPath, true);
+            handler.OnProgressChanged += progress =>
+            {
+                sbar_Progress.size = progress;
+            };
+            handler.OnCompleted += (result, error) =>
+            {
+                if (error == null)
                 {
-                    BeginInvoke(() =>
-                    {
-                        //Refresh UI in main thread.
-                        sbar_Progress.size = progress;
-                    });
-                },
-                (isSucceed, info, error) =>
+                    Debug.Log(result);
+                }
+                else
                 {
-                    if (isSucceed)
-                    {
-                        Debug.Log(info);
-                    }
-                    else
-                    {
-                        info = error.Message;
-                        Debug.LogError(info);
-                    }
+                    result = error.Message;
+                    Debug.LogError(result);
+                }
 
-                    BeginInvoke(() =>
-                    {
-                        //Refresh UI in main thread.
-                        btn_StartUnzip.interactable = true;
-                        txt_Info.text = info;
-                    });
-                });
+                btn_StartUnzip.interactable = true;
+                txt_Info.text = result;
+            };
         }
     }
 }
