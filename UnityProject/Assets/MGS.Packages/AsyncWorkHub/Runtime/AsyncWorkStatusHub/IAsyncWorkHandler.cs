@@ -11,6 +11,7 @@
  *************************************************************************/
 
 using System;
+using System.Collections;
 
 namespace MGS.Work
 {
@@ -28,6 +29,12 @@ namespace MGS.Work
         /// Notify status of work.
         /// </summary>
         void NotifyStatus();
+
+        /// <summary>
+        /// Wait the work done.
+        /// </summary>
+        /// <returns></returns>
+        IEnumerator WaitDone();
     }
 
     /// <summary>

@@ -1,0 +1,15 @@
+{
+    "name": "MGS.Compress",
+    "references": [
+        "GUID:a670d38d1b33f7c43b051c756a915a7d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

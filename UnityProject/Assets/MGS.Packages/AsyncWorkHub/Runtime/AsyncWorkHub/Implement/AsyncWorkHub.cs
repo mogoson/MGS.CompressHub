@@ -26,6 +26,16 @@ namespace MGS.Work
         public int Concurrency { set; get; }
 
         /// <summary>
+        /// Count of waitings works.
+        /// </summary>
+        public int Waitings { get { return waitingWorks.Count; } }
+
+        /// <summary>
+        /// Count of workings works.
+        /// </summary>
+        public int Workings { get { return workingWorks.Count; } }
+
+        /// <summary>
         /// Resolver to check retrieable.
         /// </summary>
         public IWorkResolver Resolver { set; get; }

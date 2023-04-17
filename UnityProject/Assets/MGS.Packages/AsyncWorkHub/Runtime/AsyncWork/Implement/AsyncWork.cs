@@ -81,7 +81,21 @@ namespace MGS.Work
         /// <summary>
         /// Execute work operation.
         /// </summary>
-        public abstract void Execute();
+        public virtual void Execute()
+        {
+            try
+            {
+                OnExecute();
+            }
+            catch (Exception ex)
+            {
+                Error = ex;
+            }
+            finally
+            {
+                OnFinally();
+            }
+        }
 
         /// <summary>
         /// Execute work async..
@@ -95,7 +109,7 @@ namespace MGS.Work
                 {
                     try
                     {
-                        Execute();
+                        OnExecute();
                     }
                     catch (Exception ex)
                     {
@@ -150,6 +164,11 @@ namespace MGS.Work
             Result = default;
             Error = null;
         }
+
+        /// <summary>
+        /// On execute work operation.
+        /// </summary>
+        protected abstract void OnExecute();
 
         /// <summary>
         /// On work finally.

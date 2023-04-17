@@ -22,7 +22,7 @@ namespace MGS.Work.Demo
             Key = Guid.NewGuid().ToString();
         }
 
-        public override void Execute()
+        protected override void OnExecute()
         {
             //Simulate do something.
             Thread.Sleep(1000);

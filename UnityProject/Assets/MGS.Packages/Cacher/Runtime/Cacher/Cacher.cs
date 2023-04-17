@@ -26,6 +26,11 @@ namespace MGS.Cachers
         public int MaxCache { set; get; }
 
         /// <summary>
+        /// Count of current cache.
+        /// </summary>
+        public int Count { get { return caches.Count; } }
+
+        /// <summary>
         /// Cache datas.
         /// </summary>
         protected Dictionary<string, Cache<T>> caches = new Dictionary<string, Cache<T>>();
@@ -47,7 +52,7 @@ namespace MGS.Cachers
         public void Set(string key, T value)
         {
             var keys = caches.Keys.GetEnumerator();
-            while (caches.Count > MaxCache)
+            while (caches.Count >= MaxCache)
             {
                 keys.MoveNext();
                 caches.Remove(keys.Current);

@@ -1,0 +1,15 @@
+{
+    "name": "MGS.AsyncWorkHub",
+    "references": [
+        "GUID:f7c2d6073d88054489c30b6a9434e278"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -49,8 +49,9 @@ namespace MGS.Work
             int retryTimes = 3, ICollection<Type> tolerables = null,
             int maxCacheCount = 100, int cacheTimeout = 5000)
         {
+            var resultCacher = CreateCacher<object>(maxCacheCount, cacheTimeout);
+            var workCacher = CreateCacher<IAsyncWork>(maxCacheCount);
             var resolver = CreateResolver(retryTimes, tolerables);
-            var resultCacher = CreateCacher(maxCacheCount, cacheTimeout, out ICacher<IAsyncWork> workCacher);
             return new AsyncWorkCacheHub(resultCacher, workCacher, concurrency, resolver);
         }
 
@@ -67,8 +68,9 @@ namespace MGS.Work
             int retryTimes = 3, ICollection<Type> tolerables = null,
             int maxCacheCount = 100, int cacheTimeout = 5000)
         {
+            var resultCacher = CreateCacher<object>(maxCacheCount, cacheTimeout);
+            var workCacher = CreateCacher<IAsyncWork>(maxCacheCount);
             var resolver = CreateResolver(retryTimes, tolerables);
-            var resultCacher = CreateCacher(maxCacheCount, cacheTimeout, out ICacher<IAsyncWork> workCacher);
 
 #if UNITY_STANDALONE || UNITY_IOS || UNITY_ANDROID
             //Thread work async, notify status in unity main thread.
@@ -85,7 +87,7 @@ namespace MGS.Work
         /// <param name="retryTimes">Retry times. do not active retry ability if let retryTimes=0.</param>
         /// <param name="tolerables">Tolerable exception types can be retry. default is [WebException,TimeoutException] if let it null.</param>
         /// <returns></returns>
-        private static IWorkResolver CreateResolver(int retryTimes, ICollection<Type> tolerables)
+        public static IWorkResolver CreateResolver(int retryTimes, ICollection<Type> tolerables)
         {
             if (retryTimes <= 0)
             {
@@ -104,22 +106,33 @@ namespace MGS.Work
         /// Create cacher for work.
         /// </summary>
         /// <param name="maxCacheCount">Max count of caches.</param>
-        /// <param name="cacheTimeout">Timeout(ms)</param>
         /// <returns></returns>
-        private static ICacher<object> CreateCacher(int maxCacheCount, int cacheTimeout, out ICacher<IAsyncWork> workCacher)
+        public static ICacher<T> CreateCacher<T>(int maxCacheCount)
         {
             if (maxCacheCount <= 0)
             {
-                workCacher = null;
+                return null;
+            }
+
+            //A cacher to cache the waiting and working work to reuse for the same url.
+            return new Cacher<T>(maxCacheCount);
+        }
+
+        /// <summary>
+        /// Create cacher for work.
+        /// </summary>
+        /// <param name="maxCacheCount">Max count of caches.</param>
+        /// <param name="cacheTimeout">Timeout(ms)</param>
+        /// <returns></returns>
+        public static ICacher<T> CreateCacher<T>(int maxCacheCount, int cacheTimeout)
+        {
+            if (maxCacheCount <= 0)
+            {
                 return null;
             }
 
             //A cacher with timeout to cache the result from work.
-            var resultCacher = new TimeoutCacher<object>(maxCacheCount, cacheTimeout);
-
-            //A cacher to cache the waiting and working work to reuse for the same url.
-            workCacher = new Cacher<IAsyncWork>(maxCacheCount);
-            return resultCacher;
+            return new TimeoutCacher<T>(maxCacheCount, cacheTimeout);
         }
     }
 }

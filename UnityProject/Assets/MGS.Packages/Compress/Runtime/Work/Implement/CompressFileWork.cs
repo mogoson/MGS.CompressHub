@@ -61,9 +61,9 @@ namespace MGS.Work.Compress
         }
 
         /// <summary>
-        /// Execute work operation.
+        /// On execute work operation.
         /// </summary>
-        public override void Execute()
+        protected override void OnExecute()
         {
             compressor.Compress(entries, destFile, encoding,
                 directoryPathInArchive, clearBefor,

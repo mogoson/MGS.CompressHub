@@ -26,6 +26,11 @@ namespace MGS.Cachers
         int MaxCache { set; get; }
 
         /// <summary>
+        /// Count of current cache.
+        /// </summary>
+        int Count { get; }
+
+        /// <summary>
         /// Set cache data.
         /// </summary>
         /// <param name="key"></param>

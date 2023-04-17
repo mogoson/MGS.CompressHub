@@ -11,6 +11,7 @@
  *************************************************************************/
 
 using System;
+using System.Collections;
 
 namespace MGS.Work
 {
@@ -87,6 +88,18 @@ namespace MGS.Work
                 {
                     InvokeOnCompleted(Work.Result, Work.Error);
                 }
+            }
+        }
+
+        /// <summary>
+        /// Wait the work done.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator WaitDone()
+        {
+            while (!Work.IsDone)
+            {
+                yield return null;
             }
         }
 

@@ -95,9 +95,9 @@ namespace MGS.Work
         }
 
         /// <summary>
-        /// Execute work operation.
+        /// On execute work operation.
         /// </summary>
-        public override void Execute()
+        protected override void OnExecute()
         {
             step = -1;
             foreach (var work in works)

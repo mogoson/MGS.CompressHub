@@ -23,22 +23,27 @@ namespace MGS.Work.Compress
         /// <summary>
         /// Create net hub with concurrency and cache ability.
         /// </summary>
+        /// <param name="compressor">Compressor to do compress work.</param>
         /// <param name="concurrency">Max count of concurrency works.</param>
         /// <param name="retryTimes">Retry times. do not active retry ability if let retryTimes=0.</param>
         /// <param name="tolerables">Tolerable exception types can be retry. default is [WebException,TimeoutException] if let it null.</param>
         /// <param name="maxCacheCount">Max count of caches.</param>
         /// <param name="cacheTimeout">Timeout(ms)</param>
         /// <returns></returns>
-        public static ICompressHub CreateHub(int concurrency = 10,
+        public static ICompressHub CreateHub(ICompressor compressor = null,
+            int concurrency = 10,
             int retryTimes = 3, ICollection<Type> tolerables = null,
             int maxCacheCount = 100, int cacheTimeout = 5000)
         {
             var asyncHub = WorkHubFactory.CreateStatusHub(concurrency, retryTimes, tolerables, maxCacheCount, cacheTimeout);
+            if (compressor == null)
+            {
 #if true
-            var compressor = new IonicCompressor();
+                compressor = new IonicCompressor();
 #else
-            var compressor = new SharpCompressor();
+                compressor = new SharpCompressor();
 #endif
+            }
             return new CompressHub(asyncHub, compressor);
         }
     }
