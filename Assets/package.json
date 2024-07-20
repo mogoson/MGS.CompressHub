@@ -1,0 +1,7 @@
+{
+    "description": "Compress and decompress file.",
+    "displayName": "Compress Hub",
+    "name": "com.mgs.compresshub",
+    "unity": "2021.3",
+    "version": "1.0.0"
+}

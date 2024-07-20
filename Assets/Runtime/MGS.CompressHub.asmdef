@@ -1,0 +1,17 @@
+{
+    "name": "MGS.CompressHub",
+    "rootNamespace": "",
+    "references": [
+        "MGS.AsyncWorkHub",
+        "MGS.Cachers"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
