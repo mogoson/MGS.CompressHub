@@ -1,5 +1,5 @@
-/*************************************************************************
- *  Copyright (C) 2024 Mogoson. All rights reserved.
+﻿/*************************************************************************
+ *  Copyright © 2024 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
  *  File         :  CompressHub.cs
  *  Description  :  Null.
@@ -22,13 +22,13 @@ namespace MGS.Compress
             string directoryPathInArchive = null, bool clearBefor = true)
         {
             var work = new CompressWork(entries, destFile, encoding, directoryPathInArchive, clearBefor);
-            return EnqueueWork(work);
+            return Enqueue(work);
         }
 
         public IAsyncWorkHandler<string> DecompressAsync(string filePath, string destDir, bool clearBefor = true)
         {
             var work = new DecompressWork(filePath, destDir, clearBefor);
-            return EnqueueWork(work);
+            return Enqueue(work);
         }
     }
 }

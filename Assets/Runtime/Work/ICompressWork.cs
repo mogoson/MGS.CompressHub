@@ -1,5 +1,5 @@
-/*************************************************************************
- *  Copyright (C) 2024 Mogoson. All rights reserved.
+﻿/*************************************************************************
+ *  Copyright © 2024 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
  *  File         :  ICompressWork.cs
  *  Description  :  Null.
@@ -14,8 +14,5 @@ using MGS.Work;
 
 namespace MGS.Compress
 {
-    public interface ICompressWork : IAsyncWork<string>
-    {
-
-    }
+    public interface ICompressWork : IAsyncWork<string> { }
 }

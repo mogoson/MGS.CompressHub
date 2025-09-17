@@ -1,7 +1,23 @@
 {
-    "description": "Compress and decompress file.",
-    "displayName": "Compress Hub",
     "name": "com.mgs.compresshub",
+    "version": "1.0.0",
+    "displayName": "Compress Hub",
+    "description": "Compress and decompress file.",
     "unity": "2021.3",
-    "version": "1.0.0"
+    "keywords": [
+        "compress",
+        "decompress"
+    ],
+    "author": {
+        "name": "Mogoson",
+        "email": "mogoson@outlook.com",
+        "url": "https://github.com/mogoson"
+    },
+    "samples": [
+        {
+            "displayName": "Sample",
+            "description": "Sample for compress and decompress file.",
+            "path": "Samples~/Sample"
+        }
+    ]
 }
