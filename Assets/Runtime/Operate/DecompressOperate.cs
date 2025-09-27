@@ -1,7 +1,7 @@
 ﻿/*************************************************************************
  *  Copyright © 2024 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  DecompressWork.cs
+ *  File         :  DecompressOperate.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -12,17 +12,17 @@
 
 using System.IO;
 using Ionic.Zip;
-using MGS.Work;
+using MGS.Operate;
 
 namespace MGS.Compress
 {
-    public class DecompressWork : AsyncWork<string>, ICompressWork
+    public class DecompressOperate : AsyncOperate<string>, ICompressOperate
     {
         protected string filePath;
         protected string destDir;
         protected bool clearBefor;
 
-        public DecompressWork(string filePath, string destDir, bool clearBefor = true)
+        public DecompressOperate(string filePath, string destDir, bool clearBefor = true)
         {
             this.filePath = filePath;
             this.destDir = destDir;

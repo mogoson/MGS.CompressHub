@@ -38,16 +38,12 @@ namespace MGS.Compress.Sample
         [SerializeField]
         Text txt_Info;
 
-        ICompressHub compressHub;
-
         void Start()
         {
             ipt_FilePath.text = string.Format("{0}/TestZipDir/", Environment.CurrentDirectory);
             ipt_ZipName.text = "TestZipFile.zip";
             ipt_RootDir.text = "CustomRootDir";
             btn_StartZip.onClick.AddListener(OnBtnStartZipClick);
-
-            compressHub = new CompressHub();
         }
 
         void OnBtnStartZipClick()
@@ -61,7 +57,7 @@ namespace MGS.Compress.Sample
             var zipFile = string.Format("{0}/{1}", Path.GetDirectoryName(filePath), zipName);
             var rootDir = ipt_RootDir.text.Trim();
 
-            var handler = compressHub.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true);
+            var handler = Global.CompressHub.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true);
             handler.OnProgressChanged += progress =>
             {
                 sbar_Progress.size = progress;

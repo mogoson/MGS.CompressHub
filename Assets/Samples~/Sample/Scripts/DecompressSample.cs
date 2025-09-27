@@ -34,15 +34,11 @@ namespace MGS.Compress.Sample
         [SerializeField]
         Text txt_Info;
 
-        ICompressHub compressHub;
-
         void Start()
         {
             ipt_ZipFile.text = string.Format("{0}/TestZipDir/TestZipFile.zip", Environment.CurrentDirectory);
             ipt_UnzipDir.text = "TestUnzipDir";
             btn_StartUnzip.onClick.AddListener(OnBtnStartUnzipClick);
-
-            compressHub = new CompressHub();
         }
 
         void OnBtnStartUnzipClick()
@@ -55,7 +51,7 @@ namespace MGS.Compress.Sample
             var unzipDirName = ipt_UnzipDir.text.Trim();
             var unzipDirPath = string.Format("{0}/{1}/", Path.GetDirectoryName(filePath), unzipDirName);
 
-            var handler = compressHub.DecompressAsync(filePath, unzipDirPath, true);
+            var handler = Global.CompressHub.DecompressAsync(filePath, unzipDirPath, true);
             handler.OnProgressChanged += progress =>
             {
                 sbar_Progress.size = progress;

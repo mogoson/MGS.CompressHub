@@ -1,7 +1,7 @@
 ﻿/*************************************************************************
  *  Copyright © 2024 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  CompressWork.cs
+ *  File         :  CompressOperate.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -14,11 +14,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Ionic.Zip;
-using MGS.Work;
+using MGS.Operate;
 
 namespace MGS.Compress
 {
-    public class CompressWork : AsyncWork<string>, ICompressWork
+    public class CompressOperate : AsyncOperate<string>, ICompressOperate
     {
         protected IEnumerable<string> entries;
         protected string destFile;
@@ -26,7 +26,7 @@ namespace MGS.Compress
         protected string directoryPathInArchive = null;
         protected bool clearBefor = true;
 
-        public CompressWork(IEnumerable<string> entries, string destFile, Encoding encoding,
+        public CompressOperate(IEnumerable<string> entries, string destFile, Encoding encoding,
             string directoryPathInArchive = null, bool clearBefor = true)
         {
             this.entries = entries;

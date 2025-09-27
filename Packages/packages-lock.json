@@ -1,18 +1,11 @@
 {
   "dependencies": {
-    "com.mgs.asyncworkhub": {
-      "version": "https://github.com/mogoson/MGS.AsyncWorkHub.git?path=/Assets",
+    "com.mgs.asyncoperatehub": {
+      "version": "https://github.com/mogoson/MGS.AsyncOperateHub.git?path=/Assets",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "4ad72b826eed588aa4813fd9a8a06e8b24e9ce1b"
-    },
-    "com.mgs.cacher": {
-      "version": "https://github.com/mogoson/MGS.Cacher.git?path=/Assets",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "db7560ae7df3a62d6d9990c3cb08eee9f6715fcd"
+      "hash": "59b3809db0ff23e54e25a84320f3c0fde8ad1382"
     },
     "com.mgs.scriptdiemaker": {
       "version": "https://github.com/mogoson/MGS.ScriptDiemaker.git?path=/Assets",

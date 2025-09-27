@@ -2,8 +2,8 @@
     "name": "MGS.CompressHub.Sample",
     "rootNamespace": "",
     "references": [
-        "MGS.CompressHub",
-        "MGS.AsyncWorkHub"
+        "GUID:32d56c053b1b59a49828261b350a3239",
+        "GUID:586dd2f55b142a246812ab8fd8cbbc7e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

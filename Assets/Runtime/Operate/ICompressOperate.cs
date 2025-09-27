@@ -1,7 +1,7 @@
 ﻿/*************************************************************************
  *  Copyright © 2024 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  ICompressWork.cs
+ *  File         :  ICompressOperate.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -10,9 +10,9 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using MGS.Work;
+using MGS.Operate;
 
 namespace MGS.Compress
 {
-    public interface ICompressWork : IAsyncWork<string> { }
+    public interface ICompressOperate : IAsyncOperate<string> { }
 }

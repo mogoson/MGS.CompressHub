@@ -2,8 +2,7 @@
     "name": "MGS.CompressHub",
     "rootNamespace": "",
     "references": [
-        "MGS.AsyncWorkHub",
-        "MGS.Cachers"
+        "GUID:586dd2f55b142a246812ab8fd8cbbc7e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -12,23 +12,30 @@
 
 using System.Collections.Generic;
 using System.Text;
-using MGS.Work;
+using MGS.Operate;
 
 namespace MGS.Compress
 {
-    public class CompressHub : AsyncWorkMonoHub, ICompressHub
+    public class CompressHub : ICompressHub
     {
-        public IAsyncWorkHandler<string> CompressAsync(IEnumerable<string> entries, string destFile, Encoding encoding,
-            string directoryPathInArchive = null, bool clearBefor = true)
+        public IAsyncOperateHub AsyncHub { protected set; get; }
+
+        public CompressHub(IAsyncOperateHub asyncHub)
         {
-            var work = new CompressWork(entries, destFile, encoding, directoryPathInArchive, clearBefor);
-            return Enqueue(work);
+            AsyncHub = asyncHub;
         }
 
-        public IAsyncWorkHandler<string> DecompressAsync(string filePath, string destDir, bool clearBefor = true)
+        public IAsyncOperate<string> CompressAsync(IEnumerable<string> entries, string destFile, Encoding encoding,
+            string directoryPathInArchive = null, bool clearBefor = true)
         {
-            var work = new DecompressWork(filePath, destDir, clearBefor);
-            return Enqueue(work);
+            var work = new CompressOperate(entries, destFile, encoding, directoryPathInArchive, clearBefor);
+            return AsyncHub.Enqueue(work);
+        }
+
+        public IAsyncOperate<string> DecompressAsync(string filePath, string destDir, bool clearBefor = true)
+        {
+            var work = new DecompressOperate(filePath, destDir, clearBefor);
+            return AsyncHub.Enqueue(work);
         }
     }
 }

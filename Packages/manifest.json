@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "com.mgs.asyncworkhub": "https://github.com/mogoson/MGS.AsyncWorkHub.git?path=/Assets",
-    "com.mgs.cacher": "https://github.com/mogoson/MGS.Cacher.git?path=/Assets",
+    "com.mgs.asyncoperatehub": "https://github.com/mogoson/MGS.AsyncOperateHub.git?path=/Assets",
     "com.mgs.scriptdiemaker": "https://github.com/mogoson/MGS.ScriptDiemaker.git?path=/Assets",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.ide.rider": "3.0.28",

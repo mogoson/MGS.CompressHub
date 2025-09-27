@@ -12,15 +12,17 @@
 
 using System.Collections.Generic;
 using System.Text;
-using MGS.Work;
+using MGS.Operate;
 
 namespace MGS.Compress
 {
-    public interface ICompressHub : IAsyncWorkStatusHub
+    public interface ICompressHub
     {
-        IAsyncWorkHandler<string> CompressAsync(IEnumerable<string> entries, string destFile, Encoding encoding,
+        IAsyncOperateHub AsyncHub { get; }
+
+        IAsyncOperate<string> CompressAsync(IEnumerable<string> entries, string destFile, Encoding encoding,
             string directoryPathInArchive = null, bool clearBefor = true);
 
-        IAsyncWorkHandler<string> DecompressAsync(string filePath, string destDir, bool clearBefor = true);
+        IAsyncOperate<string> DecompressAsync(string filePath, string destDir, bool clearBefor = true);
     }
 }
