@@ -64,3 +64,4 @@ crashlytics-build.properties
 /*.vsconfig
 /TestZipDir
 /UserSettings
+/TestDir

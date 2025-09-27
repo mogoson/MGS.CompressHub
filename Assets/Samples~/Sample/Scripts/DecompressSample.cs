@@ -11,7 +11,6 @@
  *************************************************************************/
 
 using System;
-using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,7 +35,7 @@ namespace MGS.Compress.Sample
 
         void Start()
         {
-            ipt_ZipFile.text = string.Format("{0}/TestZipDir/TestZipFile.zip", Environment.CurrentDirectory);
+            ipt_ZipFile.text = $"{Environment.CurrentDirectory}/TestDir/TestZipFile.zip";
             ipt_UnzipDir.text = "TestUnzipDir";
             btn_StartUnzip.onClick.AddListener(OnBtnStartUnzipClick);
         }
@@ -49,7 +48,7 @@ namespace MGS.Compress.Sample
 
             var filePath = ipt_ZipFile.text.Trim();
             var unzipDirName = ipt_UnzipDir.text.Trim();
-            var unzipDirPath = string.Format("{0}/{1}/", Path.GetDirectoryName(filePath), unzipDirName);
+            var unzipDirPath = $"{Environment.CurrentDirectory}/TestDir/{unzipDirName}";
 
             var handler = Global.CompressHub.DecompressAsync(filePath, unzipDirPath, true);
             handler.OnProgressChanged += progress =>

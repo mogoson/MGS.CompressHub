@@ -11,7 +11,6 @@
  *************************************************************************/
 
 using System;
-using System.IO;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,7 +39,7 @@ namespace MGS.Compress.Sample
 
         void Start()
         {
-            ipt_FilePath.text = string.Format("{0}/TestZipDir/", Environment.CurrentDirectory);
+            ipt_FilePath.text = $"{Environment.CurrentDirectory}/TestDir/TestZipDir/";
             ipt_ZipName.text = "TestZipFile.zip";
             ipt_RootDir.text = "CustomRootDir";
             btn_StartZip.onClick.AddListener(OnBtnStartZipClick);
@@ -54,7 +53,7 @@ namespace MGS.Compress.Sample
 
             var filePath = ipt_FilePath.text.Trim();
             var zipName = ipt_ZipName.text.Trim();
-            var zipFile = string.Format("{0}/{1}", Path.GetDirectoryName(filePath), zipName);
+            var zipFile = $"{Environment.CurrentDirectory}/TestDir/{zipName}";
             var rootDir = ipt_RootDir.text.Trim();
 
             var handler = Global.CompressHub.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true);
