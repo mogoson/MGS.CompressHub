@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "59b3809db0ff23e54e25a84320f3c0fde8ad1382"
+      "hash": "b082ecb234b7fb208ea0cd3c01b6a1e6a663a426"
     },
     "com.mgs.scriptdiemaker": {
       "version": "https://github.com/mogoson/MGS.ScriptDiemaker.git?path=/Assets",
