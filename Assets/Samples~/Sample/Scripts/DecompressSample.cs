@@ -51,7 +51,7 @@ namespace MGS.Compress.Sample
             var unzipDirPath = $"{Environment.CurrentDirectory}/TestDir/{unzipDirName}";
 
             var handler = Global.CompressHub.DecompressAsync(filePath, unzipDirPath, true);
-            handler.OnProgressChanged += progress =>
+            handler.OnProgressed += progress =>
             {
                 sbar_Progress.size = progress;
             };

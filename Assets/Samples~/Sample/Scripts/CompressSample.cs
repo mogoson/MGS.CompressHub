@@ -57,7 +57,7 @@ namespace MGS.Compress.Sample
             var rootDir = ipt_RootDir.text.Trim();
 
             var handler = Global.CompressHub.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true);
-            handler.OnProgressChanged += progress =>
+            handler.OnProgressed += progress =>
             {
                 sbar_Progress.size = progress;
             };

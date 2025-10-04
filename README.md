@@ -15,6 +15,8 @@
 - Unity --> Window --> Package Manager --> "+" --> Add package from git URL...
 
   ```text
+  https://github.com/mogoson/MGS.MonoAgent.git?path=/Assets
+  https://github.com/mogoson/MGS.AsyncCruiser.git?path=/Assets
   https://github.com/mogoson/MGS.AsyncOperateHub.git?path=/Assets
   https://github.com/mogoson/MGS.CompressHub.git?path=/Assets
   ```
