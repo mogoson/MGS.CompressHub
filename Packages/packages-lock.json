@@ -5,21 +5,21 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "4f13db86afb5a2f4126683b2c6073094db40a6b8"
+      "hash": "d2f5af740ad8cc95c9da03c5d6ce55844f5a4f24"
     },
     "com.mgs.asyncoperatehub": {
       "version": "https://github.com/mogoson/MGS.AsyncOperateHub.git?path=/Assets",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "a8a0f24c64f415cf5c064b0c5b13fc51dffc27b7"
+      "hash": "38c4ce044e208ec4ed75a2a600df894440b725bf"
     },
     "com.mgs.monoagent": {
       "version": "https://github.com/mogoson/MGS.MonoAgent.git?path=/Assets",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "6038d1eba47fdea5eaeead386ecf5aca01d4f16a"
+      "hash": "5e8c7c2f6cbbda58f13c444d5ad0e8fccb58a165"
     },
     "com.mgs.scriptdiemaker": {
       "version": "https://github.com/mogoson/MGS.ScriptDiemaker.git?path=/Assets",
