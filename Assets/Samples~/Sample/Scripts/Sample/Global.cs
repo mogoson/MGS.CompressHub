@@ -21,7 +21,7 @@ namespace MGS.Compress.Sample
         static Global()
         {
             var asyncHub = new AsyncOperateHub();       //Execute immediately
-            //var asyncHub = new AsyncOperateHubPro();  //Concurrent scheduling
+            //var asyncHub = new AsyncOperateHubPro();  //Manage parallely
             CompressHub = new CompressHub(asyncHub);
         }
     }

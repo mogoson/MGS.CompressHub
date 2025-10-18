@@ -1,25 +1,18 @@
 {
   "dependencies": {
-    "com.mgs.asynccruiser": {
-      "version": "https://github.com/mogoson/MGS.AsyncCruiser.git?path=/Assets",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "d2f5af740ad8cc95c9da03c5d6ce55844f5a4f24"
-    },
     "com.mgs.asyncoperatehub": {
       "version": "https://github.com/mogoson/MGS.AsyncOperateHub.git?path=/Assets",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "38c4ce044e208ec4ed75a2a600df894440b725bf"
+      "hash": "2d755cb615b7cc0be812520017f6f46ea4f9b5a9"
     },
     "com.mgs.monoagent": {
       "version": "https://github.com/mogoson/MGS.MonoAgent.git?path=/Assets",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5e8c7c2f6cbbda58f13c444d5ad0e8fccb58a165"
+      "hash": "7e186760c5c85218c0f8ec203b8e4fe42d0ab7fc"
     },
     "com.mgs.scriptdiemaker": {
       "version": "https://github.com/mogoson/MGS.ScriptDiemaker.git?path=/Assets",

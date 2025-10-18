@@ -1,12 +1,12 @@
 ﻿/*************************************************************************
- *  Copyright © 2021 Mogoson. All rights reserved.
+ *  Copyright © 2025 Mogoson All rights reserved.
  *------------------------------------------------------------------------
  *  File         :  CompressSample.cs
- *  Description  :  Null.
+ *  Description  :  Default.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
- *  Version      :  0.1.0
- *  Date         :  6/5/2021
+ *  Version      :  1.0.0
+ *  Date         :  09/26/2025
  *  Description  :  Initial development version.
  *************************************************************************/
 
@@ -26,9 +26,6 @@ namespace MGS.Compress.Sample
         InputField ipt_ZipName;
 
         [SerializeField]
-        InputField ipt_RootDir;
-
-        [SerializeField]
         Button btn_StartZip;
 
         [SerializeField]
@@ -41,7 +38,6 @@ namespace MGS.Compress.Sample
         {
             ipt_FilePath.text = $"{Environment.CurrentDirectory}/TestDir/TestZipDir/";
             ipt_ZipName.text = "TestZipFile.zip";
-            ipt_RootDir.text = "CustomRootDir";
             btn_StartZip.onClick.AddListener(OnBtnStartZipClick);
         }
 
@@ -54,15 +50,15 @@ namespace MGS.Compress.Sample
             var filePath = ipt_FilePath.text.Trim();
             var zipName = ipt_ZipName.text.Trim();
             var zipFile = $"{Environment.CurrentDirectory}/TestDir/{zipName}";
-            var rootDir = ipt_RootDir.text.Trim();
 
-            var handler = Global.CompressHub.CompressAsync(new string[] { filePath }, zipFile, Encoding.UTF8, rootDir, true);
+            var handler = Global.CompressHub.CompressAsync(filePath, zipFile, Encoding.UTF8, true);
             handler.OnProgressed += progress =>
             {
                 sbar_Progress.size = progress;
             };
             handler.OnCompleted += (info, error) =>
             {
+                sbar_Progress.size = 1.0f;
                 if (error == null)
                 {
                     Debug.Log(info);

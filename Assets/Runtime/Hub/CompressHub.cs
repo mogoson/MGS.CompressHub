@@ -6,11 +6,10 @@
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  1.0.0
- *  Date         :  2024/7/21
+ *  Date         :  2024/7/22
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using System.Collections.Generic;
 using System.Text;
 using MGS.Operate;
 
@@ -25,17 +24,24 @@ namespace MGS.Compress
             AsyncHub = asyncHub;
         }
 
-        public IAsyncOperate<string> CompressAsync(IEnumerable<string> entries, string destFile, Encoding encoding,
-            string directoryPathInArchive = null, bool clearBefor = true)
+        public ICompressOperate CompressAsync(string sourceDir, string destFile,
+            Encoding encoding, bool includeBaseDirectory = true, bool clearBefor = true)
         {
-            var work = new CompressOperate(entries, destFile, encoding, directoryPathInArchive, clearBefor);
-            return AsyncHub.Enqueue(work);
+            var operate = new DoCompressOperate(sourceDir, destFile, encoding, includeBaseDirectory, clearBefor);
+            AsyncHub.Enqueue(operate);
+            return operate;
         }
 
-        public IAsyncOperate<string> DecompressAsync(string filePath, string destDir, bool clearBefor = true)
+        public ICompressOperate DecompressAsync(string filePath, string destDir, bool clearBefor = true)
         {
-            var work = new DecompressOperate(filePath, destDir, clearBefor);
-            return AsyncHub.Enqueue(work);
+            var operate = new DecompressOperate(filePath, destDir, clearBefor);
+            AsyncHub.Enqueue(operate);
+            return operate;
+        }
+
+        public void AbortAsync(ICompressOperate operate)
+        {
+            AsyncHub.Dequeue(operate);
         }
     }
 }

@@ -2,9 +2,8 @@
     "name": "MGS.CompressHub",
     "rootNamespace": "",
     "references": [
-        "GUID:586dd2f55b142a246812ab8fd8cbbc7e",
-        "GUID:2e9b3529f98439f4b9a0b1735973d56f",
-        "GUID:9cceed7f29613d748b61cd6e62925340"
+        "MGS.AsyncOperateHub",
+        "MGS.MonoAgent"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
