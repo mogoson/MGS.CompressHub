@@ -7,7 +7,7 @@
 
 
 ## Ability
-- Compress entrie[file or directorie] to dest file.
+- Compress entrie(file or directorie) to dest file.
 - Decompress file to dest dir.
 
 ## Install
