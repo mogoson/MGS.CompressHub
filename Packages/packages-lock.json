@@ -5,21 +5,21 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2d755cb615b7cc0be812520017f6f46ea4f9b5a9"
+      "hash": "bf866a9fd3fa64dc1c0a24aff8514ea76352a9c3"
     },
     "com.mgs.monoagent": {
       "version": "https://github.com/mogoson/MGS.MonoAgent.git?path=/Assets",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7e186760c5c85218c0f8ec203b8e4fe42d0ab7fc"
+      "hash": "73f89f6151494832ee372ab0e763098f911add8f"
     },
     "com.mgs.scriptdiemaker": {
       "version": "https://github.com/mogoson/MGS.ScriptDiemaker.git?path=/Assets",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "279c1b1e2f9e1e6006bbe5aa93528f85d4d56e59"
+      "hash": "2f5d3dc6a1277f29dbf2df9ee3c76466fa73133f"
     },
     "com.unity.collab-proxy": {
       "version": "2.3.1",
